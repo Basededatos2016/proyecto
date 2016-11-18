@@ -1,6 +1,6 @@
 package conexionDB;
 
-import data_model.Vendedor;
+import Vendedor.Vendedor;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.Properties;
 /**
  * Created by Sulpick on 06/11/2016.
  */
-public class conexion_db {
+public class conexion_db{
 
 
     private Connection _con = null; //esto es una clase creada o una propiedad de java?
@@ -170,7 +170,7 @@ public class conexion_db {
         ResultSet rs = this.execute_query("select * from Vendedor where Vendedor.login=" + login + "and Vendedor.contraseña =" + contraseña);
 
         /** si hay siguiente linea, esto revisa la primera linea al parecer**/
-        //porque no se usa un while?
+        //porque no se usa un while? es una funcion
         if (rs.next())
         {
             String cedula = rs.getString("cedula");

@@ -18,7 +18,7 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
+import controlador_ventas.controlador_ventas;
 /**
  * Clase del cntrolador inicial de la aplicacion.
  */
@@ -29,10 +29,10 @@ public class main_io_controller implements Initializable
     @FXML private TextField login_text_field;
     @FXML private TextField pass_text_field;
     @FXML private javafx.scene.control.Button boton_ingreso;
-    @FXML private javafx.scene.control.Button boton_cancelar;
+    @FXML private javafx.scene.control.Button boton_salir;
     @FXML private conexion_db db = new conexion_db(); //instancia la conexion a la base de datos.
     //@FXML private Connection con;
-    @FXML private boolean login;
+    @FXML private boolean accede;
     @FXML private int permiso;
     @FXML private Pane pane;
 
@@ -66,12 +66,12 @@ public class main_io_controller implements Initializable
     //Accion del boton de iniciar sesion
 
     @FXML
-    protected void handle_login_button_action(ActionEvent event)
+    protected void handle_boton_ingreso_action(ActionEvent event)
     { //throws SQLException {
         try
         {
-            login = false;
-            System.out.println("clicked Entrar");
+            accede = false;
+            //System.out.println("clicked Entrar");
             //con = db.get_connection();
             //Statement st = con.createStatement();
             //ResultSet rs = st.executeQuery("select name,pass,rol from Person p, User u where p.id=u.id");
@@ -95,7 +95,7 @@ public class main_io_controller implements Initializable
                 if (login_text_field.getText().equals(login) && pass_text_field.getText().equals(pass))
                 {
                     System.out.println("User name registered");
-                    login = true;
+                    accede = true;
                     permiso = rs.getInt("permiso");   /** Tipo de usuario*/
                     System.out.println("El permiso del usuario es " + permiso);
 
@@ -109,16 +109,16 @@ public class main_io_controller implements Initializable
                         try {
 
                             //root = FXMLLoader.load(getClass().getResource("/ui/reception_ui.fxml"));
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/iniciodesesion.fxml"));
+                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
 
                             Parent root = (Parent)fxmlLoader.load();
 
-                            Reception_controller controller = fxmlLoader.<Reception_controller>getController();
-                            controller.set_user_id(user_id);
-                            controller.initialize(null, null);
+                            controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
+                          //  controller.set_user_login(user_login);
+                            controller.initialize();
                             //Scene scene = new Scene(root);
 
-                            Main.primary_stage.setTitle("Recepcion | Galeno (C) 2016");
+                            Main.primary_stage.setTitle("Claqueta tu tienda de cine");
 
 
                             pane.getChildren().setAll(root);
@@ -137,15 +137,15 @@ public class main_io_controller implements Initializable
                         //stage.show();
                     }
 
-
+                    /**
                     else if (permiso == 2)
                     {
                         try {
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ui/doctor_ui.fxml"));
+                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Ventanas/Ventas_Empleado.fxml"));
 
                             Parent root = (Parent)fxmlLoader.load();
-                            Doctor_controller controller = fxmlLoader.<Doctor_controller>getController();
-                            controller.set_user_id(user_id);
+                            controlador_ventas_empleado controller = fxmlLoader.<controlador_ventas_empleado>getController();
+                            //controller.set_user_id(user_id);
                             controller.initialize(null, null);
 
                             Timer timer = new Timer();
@@ -173,7 +173,7 @@ public class main_io_controller implements Initializable
                             time.setCycleCount(Timeline.INDEFINITE);
                             //time.play();
 
-                            Main.primary_stage.setTitle("Medico | Galeno (C) 2016");
+                            Main.primary_stage.setTitle("Ventas Empleado | Galeno (C) 2016");
 
                             pane.getChildren().setAll(root);
 
@@ -199,7 +199,7 @@ public class main_io_controller implements Initializable
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                    }
+                    } **/
 
                 }
             }

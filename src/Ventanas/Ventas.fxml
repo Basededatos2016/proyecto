@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0000999999975" prefWidth="974.9999220703176" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controlador_ventas">
+  <children>
+    <Pane layoutX="-6.0" layoutY="0.0" prefHeight="631.0" prefWidth="987.0">
+      <children>
+        <ToggleButton layoutX="62.0" layoutY="194.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Nuevo usuario" />
+        <ToggleButton layoutX="61.0" layoutY="248.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Ventas" />
+        <ToggleButton layoutX="61.0" layoutY="300.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Busqueda" />
+        <ToggleButton layoutX="61.0" layoutY="360.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Reportes" />
+        <ToggleButton layoutX="61.0" layoutY="417.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Inventario" />
+        <ToggleButton layoutX="61.0" layoutY="476.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Cambios" />
+        <Button layoutX="60.0" layoutY="537.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Salir del sistema" />
+        <ImageView fitHeight="171.0" fitWidth="171.0" layoutX="45.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/logo%20claqueta.jpg" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="29.700927734375" fitWidth="34.53596134242174" layoutX="188.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/Add%20User.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="36.9609375" fitWidth="49.281248943859275" layoutX="180.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/shopping.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="33.53594970703125" fitWidth="33.53594970703125" layoutX="188.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/search.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="33.9609375" fitWidth="33.9609375" layoutX="186.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/reportes.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="36.75" fitWidth="49.0" layoutX="187.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/inventario1.png" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="36.75" fitWidth="36.75" layoutX="182.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/cambio.png" />
+          </image>
+        </ImageView>
+        <TextField layoutX="344.0" layoutY="423.0" prefWidth="531.000022070315" />
+        <TreeView layoutX="344.0" layoutY="88.0" prefHeight="316.0" prefWidth="608.9998779296875" />
+        <RadioButton layoutX="344.0" layoutY="490.0" mnemonicParsing="false" text="Efectivo" />
+        <RadioButton layoutX="344.0" layoutY="518.0" mnemonicParsing="false" text="Transferencia" />
+        <TextField layoutX="434.0" layoutY="545.0" prefHeight="20.9609375" prefWidth="200.0" />
+        <Label layoutX="345.0" layoutY="545.0" prefWidth="90.0" text="N° Referencia" />
+        <Button layoutX="841.0" layoutY="562.0" mnemonicParsing="false" prefWidth="110.0" text="Anular factura" />
+        <Button layoutX="841.0" layoutY="527.0" mnemonicParsing="false" prefWidth="110.0" text="Facturar" />
+        <Button layoutX="841.0" layoutY="494.0" mnemonicParsing="false" prefWidth="109.99990000000253" text="Monto completo" />
+        <Label layoutX="345.0" layoutY="577.0" prefWidth="75.0" text="Descuento" />
+        <TextField layoutX="434.0" layoutY="574.0" prefHeight="20.9609375" prefWidth="34.53594970703125" />
+        <Label layoutX="478.0" layoutY="577.0" prefWidth="10.5" text="\%" />
+        <ImageView fitHeight="23.9609375" fitWidth="23.9609375" layoutX="933.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../../../Pictures/search.png" />
+          </image>
+        </ImageView>
+        <Button layoutX="899.0" layoutY="424.0" mnemonicParsing="false" text="B" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
