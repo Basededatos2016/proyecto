@@ -22,7 +22,7 @@ import controlador_ventas.controlador_ventas;
 /**
  * Clase del cntrolador inicial de la aplicacion.
  */
-public class main_io_controller implements Initializable
+public class main_controller_java implements Initializable
 {
 
     /** aqui agrega cada uno de los controles que estan en la ventana **/
