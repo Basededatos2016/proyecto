@@ -34,7 +34,7 @@ public class conexion_db{
         FileInputStream __in = null; //instancia archivo de lectura
         try
         {
-            __in = new FileInputStream("/db_config.properties");
+            __in = new FileInputStream("C:\\Users\\Evely\\IdeaProjects\\ProyectoBDU2016\\proyecto\\src\\conexionDB\\db_config.properties");
             // Abre el archivo de propiedades
             //System.out.println("properties readed");
         }

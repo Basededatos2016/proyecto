@@ -211,8 +211,7 @@ public class main_controller_java implements Initializable
         //pass_text_field.getText()
     }
 
-    @FXML
-    protected void handle_menu_item_exit_action(ActionEvent e)
+    @FXML    protected void handle_menu_item_exit_action(ActionEvent e)
     {
         System.exit(0);
     }
