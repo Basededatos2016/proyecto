@@ -46,7 +46,7 @@
     <Button fx:id="ventas" layoutX="34.0" layoutY="184.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Ventas" />
     <Button layoutX="32.0" layoutY="294.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Reportes" textOverrun="CLIP" />
     <Button fx:id="inventario" layoutX="34.0" layoutY="358.0" mnemonicParsing="false" onAction="#Mostrar_Inventario" prefHeight="31.0" prefWidth="109.0" text="Inventario" />
-    <Button fx:id="cambios" layoutX="32.0" layoutY="413.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Cambios" />
+    <Button fx:id="cambios" layoutX="32.0" layoutY="413.0" mnemonicParsing="false" onAction="#Mostrar_Cambios" prefHeight="31.0" prefWidth="109.0" text="Cambios" />
     <ImageView id="logo" fitHeight="115.0" fitWidth="164.0" layoutX="20.0" layoutY="11.0" pickOnBounds="true">
       <image>
         <Image url="@ImagenesProyecto/logo.jpg" preserveRatio="true" smooth="true" />

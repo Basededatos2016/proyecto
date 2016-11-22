@@ -35,11 +35,25 @@ public class controlador_buscar implements Initializable {
 
         Stage primary_stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("../Ventanas/CrearUsuario.fxml"));
+        primary_stage.setTitle("Crear usuario");
+        primary_stage.setScene(new Scene(root, 630 , 640));
+        primary_stage.show();
+
+    }
+
+
+    @FXML
+    void Mostrar_Cambios() throws Exception {
+
+        Stage primary_stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("../Ventanas/Cambios.fxml"));
         primary_stage.setTitle("Cambios");
         primary_stage.setScene(new Scene(root, 630 , 640));
         primary_stage.show();
 
     }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
