@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="808.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Accordion expandedPane="$null" layoutX="45.0" layoutY="253.0" prefHeight="400.0" />
+    <ImageView id="Add User" fitHeight="31.0" fitWidth="42.0" layoutX="169.0" layoutY="132.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/Add%20User.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="shopping" fitHeight="41.999908447265625" fitWidth="42.0" layoutX="166.0" layoutY="185.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/shopping.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="search" fitHeight="41.999900817871094" fitWidth="42.0" layoutX="169.0" layoutY="238.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/search.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="reportes" fitHeight="41.999908447265625" fitWidth="48.0" layoutX="166.0" layoutY="295.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/reportes.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="inventario1" fitHeight="41.999908447265625" fitWidth="48.0" layoutX="171.0" layoutY="359.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/inventario1.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="cambio" fitHeight="42.00000762939453" fitWidth="42.0" layoutX="166.0" layoutY="413.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/cambio.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button layoutX="45.0" layoutY="190.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Ventas" />
+    <Button layoutX="43.0" layoutY="300.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Reportes" textOverrun="CLIP" />
+    <Button layoutX="45.0" layoutY="364.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Inventario" />
+    <Button layoutX="43.0" layoutY="419.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Cambios" />
+    <ImageView id="logo" fitHeight="115.0" fitWidth="164.0" layoutX="31.0" layoutY="17.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/logo.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ToggleButton layoutX="45.0" layoutY="245.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Búsqueda" />
+    <ToggleButton layoutX="45.0" layoutY="132.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Nuevo usuario" />
+    <TabPane layoutX="248.0" layoutY="132.0" prefHeight="359.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Crear usuario">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="500.0">
+              <children>
+                <Button layoutX="122.0" layoutY="282.0" mnemonicParsing="false" text="Guardar" />
+                <Button layoutX="251.0" layoutY="282.0" mnemonicParsing="false" text="Limpiar" />
+                <Label layoutX="28.0" layoutY="130.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Nombre:">
+                  <font>
+                    <Font name="Cambria Math" size="14.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <TextField layoutX="86.0" layoutY="129.0" prefWidth="125.0" />
+                <Label font="$x1" layoutX="259.0" layoutY="130.0" prefHeight="22.0" prefWidth="79.0" text="Apellido:" />
+                <TextField layoutX="320.0" layoutY="130.0" prefWidth="157.0" />
+                <Label font="$x1" layoutX="30.0" layoutY="83.0" prefHeight="22.0" prefWidth="48.0" text="Cédula:" />
+                <ComboBox layoutX="77.0" layoutY="83.0" minWidth="28.0" prefHeight="21.0" prefWidth="42.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="V" />
+                      <String fx:value="E" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label layoutX="122.0" layoutY="86.0" text="-" />
+                <TextField layoutX="127.0" layoutY="83.0" prefWidth="89.0" />
+                <Label font="$x1" layoutX="262.0" layoutY="82.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Teléfono:" />
+                <Label font="$x1" layoutX="28.0" layoutY="173.0" prefHeight="22.0" prefWidth="79.0" text="Dirección:" />
+                <TextField layoutX="94.0" layoutY="173.0" prefWidth="383.0" />
+                <Label font="$x1" layoutX="28.0" layoutY="219.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Usuario:" />
+                <TextField layoutX="86.0" layoutY="219.0" prefWidth="125.0" />
+                <Label font="$x1" layoutX="241.0" layoutY="219.0" prefHeight="22.0" prefWidth="79.0" text="Constraseña:" />
+                <TextField layoutX="320.0" layoutY="219.0" prefWidth="157.0" />
+                <ImageView id="guardar" fitHeight="41.999916076660156" fitWidth="42.0" layoutX="190.0" layoutY="272.0" pickOnBounds="true">
+                  <image>
+                    <Image url="@ImagenesProyecto/guardar.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <TextField layoutX="320.0" layoutY="80.0" prefWidth="30.0" />
+                <Label layoutX="350.0" layoutY="82.0" text="-" />
+                <TextField layoutX="359.0" layoutY="80.0" prefWidth="118.0" />
+                <Label layoutX="127.0" layoutY="22.0" prefHeight="34.0" prefWidth="275.0" text="Ingreso de usuario ">
+                  <font>
+                    <Font name="Cambria Math" size="24.0" />
+                  </font>
+                </Label>
+                <ImageView id="cliente" layoutX="324.0" layoutY="12.0" pickOnBounds="true">
+                  <image>
+                    <Image url="@ImagenesProyecto/cliente.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <ImageView id="limpiar" fitHeight="42.0" fitWidth="42.0" layoutX="317.0" layoutY="272.0" pickOnBounds="true">
+                  <image>
+                    <Image url="@ImagenesProyecto/limpiar.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

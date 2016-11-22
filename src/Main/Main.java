@@ -15,10 +15,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception
-
     {
 
-        Parent root = FXMLLoader.load(getClass().getResource("../Ventanas/iniciodesesion.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../Ventanas/BuscarProducto.fxml"));
         primaryStage.setTitle("Claqueta tu tienda de cine");
         primaryStage.setScene(new Scene(root, 630 , 640));
         primaryStage.show();

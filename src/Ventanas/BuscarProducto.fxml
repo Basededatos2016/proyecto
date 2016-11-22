@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="766.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controlador_buscarproducto.controlador_buscar">
+  <children>
+    <Accordion expandedPane="$null" layoutX="32.0" layoutY="228.0" prefHeight="400.0" />
+    <Button fx:id="CU" layoutX="34.0" layoutY="126.0" mnemonicParsing="false" onAction="#Mostrar_CrearUsuario" prefHeight="31.0" prefWidth="109.0" text="Nuevo usuario" />
+    <ImageView id="Add User" fitHeight="31.0" fitWidth="42.0" layoutX="158.0" layoutY="126.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/Add%20User.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="shopping" fitHeight="41.999908447265625" fitWidth="42.0" layoutX="155.0" layoutY="179.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/shopping.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="search" fitHeight="41.999900817871094" fitWidth="42.0" layoutX="158.0" layoutY="232.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/search.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="reportes" fitHeight="41.999908447265625" fitWidth="48.0" layoutX="152.0" layoutY="289.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/reportes.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="inventario1" fitHeight="41.999908447265625" fitWidth="48.0" layoutX="160.0" layoutY="353.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/inventario1.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="cambio" fitHeight="42.00000762939453" fitWidth="42.0" layoutX="155.0" layoutY="407.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/cambio.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button fx:id="ventas" layoutX="34.0" layoutY="184.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Ventas" />
+    <Button layoutX="32.0" layoutY="294.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Reportes" textOverrun="CLIP" />
+    <Button fx:id="inventario" layoutX="34.0" layoutY="358.0" mnemonicParsing="false" onAction="#Mostrar_Inventario" prefHeight="31.0" prefWidth="109.0" text="Inventario" />
+    <Button fx:id="cambios" layoutX="32.0" layoutY="413.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Cambios" />
+    <ImageView id="logo" fitHeight="115.0" fitWidth="164.0" layoutX="20.0" layoutY="11.0" pickOnBounds="true">
+      <image>
+        <Image url="@ImagenesProyecto/logo.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <TabPane layoutX="232.0" layoutY="125.0" prefHeight="318.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Buscar Producto">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button fx:id="buscar" layoutX="111.0" layoutY="177.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="60.0" text="Buscar" />
+                <Button layoutX="238.0" layoutY="177.0" mnemonicParsing="false" text="Limpiar" />
+                <Label layoutX="53.0" layoutY="74.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Nombre:">
+                  <font>
+                    <Font name="Cambria Math" size="14.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <TextField layoutX="111.0" layoutY="74.0" prefWidth="240.0" />
+                <Label font="$x1" layoutX="370.0" layoutY="73.0" prefHeight="21.0" prefWidth="28.0" text="Año:" />
+                <TextField layoutX="398.0" layoutY="73.0" prefWidth="49.0" />
+                <Label font="$x1" layoutX="53.0" layoutY="119.0" prefHeight="22.0" prefWidth="79.0" text="Temporada:" />
+                <TextField layoutX="132.0" layoutY="120.0" prefWidth="28.0" />
+                <ComboBox layoutX="278.0" layoutY="29.0" prefHeight="21.0" prefWidth="92.9998779296875" promptText="">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Películas" />
+                      <String fx:value="Series" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ImageView id="buscar" fitHeight="41.99980926513672" fitWidth="42.000099999997474" layoutX="174.0" layoutY="167.0" pickOnBounds="true">
+                  <image>
+                    <Image url="@ImagenesProyecto/buscar.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <ImageView id="peli" fitHeight="42.0" fitWidth="42.0" layoutX="377.0" layoutY="19.0" pickOnBounds="true">
+                  <image>
+                    <Image url="@ImagenesProyecto/peli.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <ImageView id="limpiar" fitHeight="42.0" fitWidth="42.0" layoutX="304.0" layoutY="167.0" pickOnBounds="true">
+                  <image>
+                    <Image url="@ImagenesProyecto/limpiar.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <ToggleButton layoutX="34.0" layoutY="239.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Búsqueda" />
+  </children>
+</AnchorPane>
