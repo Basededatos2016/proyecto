@@ -52,8 +52,8 @@ public class main_controller_java implements Initializable
         // todo temp setting to expedite login process.
         //this.user_text_field.setText("jose");  //doctor
         //this.user_text_field.setText("adm");   //admin
-        this.login_text_field.setText("admin");        //reception
-        this.pass_text_field.setText("admin");
+//        this.login_text_field.setText("admin");        //reception
+ //       this.pass_text_field.setText("admin");
     }
 
     /**

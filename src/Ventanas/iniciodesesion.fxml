@@ -8,37 +8,37 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="736.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="conexionDB.main_controller_java">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="conexionDB.main_controller_java">
   <children>
-    <Accordion expandedPane="$null" layoutX="39.0" layoutY="270.0" prefHeight="400.0" />
+    <Accordion layoutX="39.0" layoutY="270.0" prefHeight="400.0" />
     <ImageView id="Add User" fitHeight="31.0" fitWidth="42.0" layoutX="163.0" layoutY="149.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/Add%20User.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/Add%20User.png" />
       </image>
     </ImageView>
     <ImageView id="shopping" fitHeight="41.999908447265625" fitWidth="42.0" layoutX="160.0" layoutY="202.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/shopping.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/shopping.png" />
       </image>
     </ImageView>
     <ImageView id="search" fitHeight="41.999900817871094" fitWidth="42.0" layoutX="163.0" layoutY="255.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/search.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/search.png" />
       </image>
     </ImageView>
     <ImageView id="reportes" fitHeight="41.999908447265625" fitWidth="48.0" layoutX="160.0" layoutY="312.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/reportes.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/reportes.png" />
       </image>
     </ImageView>
     <ImageView id="inventario1" fitHeight="41.999908447265625" fitWidth="48.0" layoutX="165.0" layoutY="376.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/inventario1.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/inventario1.png" />
       </image>
     </ImageView>
     <ImageView id="cambio" fitHeight="42.00000762939453" fitWidth="42.0" layoutX="160.0" layoutY="430.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/cambio.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/cambio.png" />
       </image>
     </ImageView>
     <Button layoutX="39.0" layoutY="207.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Ventas" />
@@ -47,7 +47,7 @@
     <Button layoutX="37.0" layoutY="436.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Cambios" />
     <ImageView id="logo" fitHeight="115.0" fitWidth="164.0" layoutX="25.0" layoutY="34.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/logo.jpg" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/logo.jpg" />
       </image>
     </ImageView>
     <ToggleButton layoutX="39.0" layoutY="262.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Búsqueda" />
@@ -65,31 +65,31 @@
     <TextField fx:id="boton_usuario" layoutX="445.0" layoutY="203.0" prefWidth="164.0" />
     <ImageView id="cliente" fitHeight="42.0" fitWidth="42.0" layoutX="352.0" layoutY="195.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/cliente.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/cliente.png" />
       </image>
     </ImageView>
     <Label font="$x1" layoutX="366.0" layoutY="265.0" prefHeight="21.0" prefWidth="86.0" text="Contraseña:" />
     <TextField fx:id="boton_contraseña" layoutX="445.0" layoutY="263.0" prefWidth="164.0" />
-    <Button fx:id="boton_ingresar" layoutX="378.0" layoutY="356.0" mnemonicParsing="false" text="Ingresar" />
+    <Button fx:id="boton_ingresar" layoutX="378.0" layoutY="356.0" mnemonicParsing="false" onAction="#handle_boton_ingreso_action" text="Ingresar" />
     <Button fx:id="boton_salir" layoutX="519.0" layoutY="357.0" mnemonicParsing="false" text="Salir" />
     <ImageView id="contraseña" fitHeight="41.999908447265625" fitWidth="42.0" layoutX="317.0" layoutY="253.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/contraseña.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/contraseña.png" />
       </image>
     </ImageView>
     <ImageView id="ir" fitHeight="31.0" fitWidth="43.0" layoutX="325.0" layoutY="351.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/ir.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/ir.png" />
       </image>
     </ImageView>
     <ImageView id="regresar" fitHeight="31.0" fitWidth="42.0" layoutX="469.0" layoutY="353.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/regresar.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/regresar.png" />
       </image>
     </ImageView>
     <ImageView id="peli" layoutX="643.0" layoutY="78.0" pickOnBounds="true">
       <image>
-        <Image url="@ImagenesProyecto/peli.png" preserveRatio="true" smooth="true" />
+        <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/peli.png" />
       </image>
     </ImageView>
   </children>
