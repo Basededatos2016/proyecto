@@ -20,7 +20,7 @@ public class controlador_inventario {
     @FXML     private Pane pane;
 
 
-/*
+
     @FXML protected void handle_boton_busqueda(ActionEvent event){
         try {
 
@@ -38,7 +38,7 @@ public class controlador_inventario {
 
     }
 
-    @FXML protected void handle_boton_reporte(ActionEvent event){
+    @FXML protected void handle_boton_reportes(ActionEvent event){
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Reportes.fxml"));
@@ -104,7 +104,7 @@ public class controlador_inventario {
 
     }
 
-    @FXML protected void handle_boton_nuevoUsuario(ActionEvent event){
+    @FXML protected void handle_nuevoUsuario(ActionEvent event){
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/CrearUsuario.fxml"));
@@ -120,6 +120,6 @@ public class controlador_inventario {
         }
 
     }
-*/
+
 
 }

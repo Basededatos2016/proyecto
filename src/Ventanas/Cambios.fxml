@@ -12,13 +12,13 @@
   <children>
     <Pane layoutX="-7.0" layoutY="-3.0" prefHeight="631.0" prefWidth="987.0">
       <children>
-        <ToggleButton layoutX="62.0" layoutY="194.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Nuevo usuario" />
-        <ToggleButton layoutX="61.0" layoutY="248.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Ventas" />
-        <ToggleButton layoutX="61.0" layoutY="300.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Busqueda" />
-        <ToggleButton layoutX="61.0" layoutY="360.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Reportes" />
-        <ToggleButton layoutX="61.0" layoutY="417.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Inventario" />
-        <ToggleButton layoutX="61.0" layoutY="476.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Cambios" />
-        <Button layoutX="60.0" layoutY="537.0" mnemonicParsing="false" prefHeight="28.9609375" prefWidth="110.0" text="Salir del sistema" />
+        <ToggleButton layoutX="62.0" layoutY="194.0" mnemonicParsing="false" onAction="#handle_boton_nuevoUsuario" prefHeight="29.0" prefWidth="122.0" text="Nuevo usuario" />
+        <ToggleButton layoutX="61.0" layoutY="248.0" mnemonicParsing="false" onAction="#handle_boton_ventas" prefHeight="29.0" prefWidth="122.0" text="Ventas" />
+        <ToggleButton layoutX="61.0" layoutY="300.0" mnemonicParsing="false" onAction="#handle_boton_busqueda" prefHeight="29.0" prefWidth="122.0" text="Busqueda" />
+        <ToggleButton layoutX="61.0" layoutY="360.0" mnemonicParsing="false" onAction="#handle_boton_reportes" prefHeight="29.0" prefWidth="122.0" text="Reportes" />
+        <ToggleButton layoutX="61.0" layoutY="417.0" mnemonicParsing="false" onAction="#handle_boton_inventario" prefHeight="29.0" prefWidth="122.0" text="Inventario" />
+        <ToggleButton layoutX="61.0" layoutY="476.0" mnemonicParsing="false" onAction="#handle_boton_cambios" prefHeight="29.0" prefWidth="122.0" text="Cambios" />
+        <Button layoutX="59.0" layoutY="535.0" mnemonicParsing="false" onAction="#handle_salir" prefHeight="29.0" prefWidth="127.0" text="Salir del sistema" />
         <TextField layoutX="435.0" layoutY="209.0" prefWidth="360.0" />
         <Label layoutX="365.0" layoutY="211.0" text="Nombre" />
         <Label layoutX="432.0" layoutY="159.0" text="Producto entrante">
