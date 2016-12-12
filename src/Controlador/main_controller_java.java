@@ -50,9 +50,7 @@ public class main_controller_java implements Initializable {
      * @return
      */
 
-    @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         /** esta colocando valores de administrador por defecto */
         // todo temp setting to expedite login process.
         //this.user_text_field.setText("jose");  //doctor
@@ -74,7 +72,6 @@ public class main_controller_java implements Initializable {
     @FXML
     protected void handle_boton_ingreso_action(ActionEvent event) { //throws SQLException {
         try {
-
             accede = false;
             System.out.println("clicked Entrar");
 
@@ -102,7 +99,7 @@ public class main_controller_java implements Initializable {
                             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
                             Parent root = fxmlLoader.load();
                             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
-                            controller.initialize();
+
 
                             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
                             Main.primary_stage.setScene(new Scene(root, 1000 , 680));
@@ -122,7 +119,7 @@ public class main_controller_java implements Initializable {
                             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
                             Parent root = fxmlLoader.load();
                             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
-                            controller.initialize();
+                            //controller.initialize(null,null);
 
                             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
                             Main.primary_stage.setScene(new Scene(root, 1000 , 680));
