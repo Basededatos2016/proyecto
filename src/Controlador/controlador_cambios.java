@@ -13,7 +13,7 @@ import javafx.scene.layout.Pane;
  * Created by sulpickb on 12/12/16.
  */
 public class controlador_cambios {
-    @FXML     private conexion_db db = new conexion_db();
+    //@FXML     private conexion_db db = new conexion_db();
     @FXML     private Pane pane;
 
 

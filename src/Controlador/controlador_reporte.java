@@ -14,7 +14,7 @@ import javafx.scene.layout.Pane;
  */
 public class controlador_reporte {
 
-    @FXML     private conexion_db db = new conexion_db();
+//    @FXML     private conexion_db db = new conexion_db();
     @FXML     private Pane pane;
 
 

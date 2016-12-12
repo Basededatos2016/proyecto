@@ -160,8 +160,8 @@ public class controlador_nuevoUsuario {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
             Parent root = fxmlLoader.load();
             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
-            Main.primary_stage.setTitle("Cambio de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
+            Main.primary_stage.setTitle("Nuevo usuario en Claqueta");
+            Main.primary_stage.setScene(new Scene(root, 1000, 750));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){

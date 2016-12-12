@@ -34,6 +34,8 @@ public class main_controller_java implements Initializable {
     @FXML     private javafx.scene.control.Button boton_ingreso;
     @FXML     private javafx.scene.control.Button boton_salir;
     @FXML     private conexion_db db = new conexion_db(); //instancia la conexion a la base de datos.
+
+
     //@FXML private Connection con;
     @FXML     private boolean accede;
     @FXML     private int permiso;

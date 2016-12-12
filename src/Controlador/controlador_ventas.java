@@ -31,7 +31,7 @@ public class controlador_ventas {
 
      @FXML     private javafx.scene.control.Button botonNuevoUsuario;
      @FXML     private javafx.scene.control.Button boton_salir;
-     @FXML     private conexion_db db = new conexion_db(); //instancia la conexion a la base de datos.
+    // @FXML     private conexion_db db = new conexion_db(); //instancia la conexion a la base de datos.
      @FXML     private boolean accede;
      @FXML     private int permiso;
      @FXML     private Pane pane;
@@ -63,12 +63,6 @@ public class controlador_ventas {
             System.exit(0);
         }
 
-
-
-
-    @FXML protected void handle_boton_salir(ActionEvent event) {
-        System.exit(0);
-    }
 
     @FXML protected void handle_boton_busqueda(ActionEvent event){
         try {
