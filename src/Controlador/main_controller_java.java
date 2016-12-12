@@ -100,12 +100,9 @@ public class main_controller_java implements Initializable {
                             Parent root = fxmlLoader.load();
                             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
 
-
                             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
                             Main.primary_stage.setScene(new Scene(root, 1000 , 680));
                             pane.getChildren().setAll(root);
-
-
 
                         } catch (IOException e) {
                             e.printStackTrace();

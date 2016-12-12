@@ -14,18 +14,18 @@
     <Accordion layoutX="45.0" layoutY="253.0" prefHeight="400.0" />
     <Button layoutX="45.0" layoutY="190.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Ventas" />
     <Button layoutX="43.0" layoutY="300.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Reportes" textOverrun="CLIP" />
-    <Button layoutX="45.0" layoutY="364.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Inventario" />
-    <Button layoutX="43.0" layoutY="419.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Cambios" />
+    <Button layoutX="45.0" layoutY="358.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Inventario" />
+    <Button layoutX="44.0" layoutY="411.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Cambios" />
     <ToggleButton layoutX="45.0" layoutY="245.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Búsqueda" />
     <ToggleButton layoutX="45.0" layoutY="132.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Nuevo usuario" />
-    <TabPane layoutX="248.0" layoutY="129.0" prefHeight="362.0" prefWidth="518.0" tabClosingPolicy="UNAVAILABLE">
+    <TabPane layoutX="218.0" layoutY="120.0" prefHeight="371.0" prefWidth="531.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
         <Tab text="Crear usuario">
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="500.0">
               <children>
                 <Button fx:id="BotonGuardar" layoutX="122.0" layoutY="282.0" mnemonicParsing="false" onAction="#handle_boton_guardar" text="Guardar" />
-                <Button fx:id="BotonLimpiar" layoutX="251.0" layoutY="282.0" mnemonicParsing="false" text="Limpiar" />
+                <Button fx:id="BotonLimpiar" layoutX="226.0" layoutY="282.0" mnemonicParsing="false" text="Limpiar" />
                 <Label layoutX="14.0" layoutY="130.0" prefHeight="21.0" prefWidth="72.0" text="Nombre:">
                   <font>
                     <Font name="Cambria Math" size="14.0" fx:id="x1" />
@@ -35,7 +35,7 @@
                 <Label font="$x1" layoutX="247.0" layoutY="130.0" prefHeight="22.0" prefWidth="91.0" text="Apellido:" />
                 <TextField fx:id="ApellidoUsuario" layoutX="320.0" layoutY="130.0" prefWidth="157.0" />
                 <Label font="$x1" layoutX="14.0" layoutY="83.0" prefHeight="22.0" prefWidth="64.0" text="Cédula:" />
-                <ComboBox fx:id="TipoCedula" layoutX="77.0" layoutY="83.0" minWidth="28.0" onAction="#abrirLista" prefHeight="21.0" prefWidth="42.0">
+                <ComboBox fx:id="TipoCedula" layoutX="77.0" layoutY="83.0" minWidth="28.0" prefHeight="21.0" prefWidth="42.0">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="V" />
@@ -60,6 +60,7 @@
                     <Font name="Cambria Math" size="24.0" />
                   </font>
                 </Label>
+                        <Button fx:id="BotonSalir" layoutX="332.0" layoutY="282.0" mnemonicParsing="false" onAction="#handle_boton_salir" text="Salir" />
               </children>
             </AnchorPane>
           </content>

@@ -23,20 +23,6 @@ import javafx.scene.control.Label;
 
 
 /**
- * @FXML     private TextField login_text_field;
- @FXML     private TextField pass_text_field;
- @FXML     private javafx.scene.control.Button boton_ingreso;
- @FXML     private javafx.scene.control.Button boton_salir;
- @FXML     private conexion_db db = new conexion_db(); //instancia la conexion a la base de datos.
- //@FXML private Connection con;
- @FXML     private boolean accede;
- @FXML     private int permiso;
- @FXML     private Pane pane;
- @FXML     private Stage stage;
- @FXML     private Label UsuarioIncorrecto;
- *
- */
-/**
  * Created by sulpickb on 11/12/16.
  */
 public class controlador_nuevoUsuario {
@@ -58,7 +44,7 @@ public class controlador_nuevoUsuario {
     @FXML     private String Cedula;
     @FXML     private conexion_db db = new conexion_db();
 
-    @FXML    protected void handle_boton_guardar(ActionEvent event) throws IOException {
+    @FXML    protected void handle_boton_guardar(ActionEvent event) {
         try {
             Cedula = CedulaUsuario.getText();
             Nombre = NombreUsuario.getText();
@@ -72,7 +58,6 @@ public class controlador_nuevoUsuario {
                     "VALUES ( '" + Cedula + "'"+ "'" + Nombre + "'" + Apellido + "'" + "'" +Telefono + "'" +
                     "'" + Direccion  +"'" + "'" + Usuario + "'" + "'" + Contrasena + "')" ;
             db.execute_query(query);
-
 
         } catch (Exception e){  /** Excepcion general **/
 
