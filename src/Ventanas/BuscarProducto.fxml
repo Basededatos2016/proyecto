@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="766.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controlador_buscarproducto.controlador_buscar">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="766.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Controlador.controlador_buscar">
   <children>
     <Accordion expandedPane="$null" layoutX="32.0" layoutY="228.0" prefHeight="400.0" />
     <Button fx:id="CU" layoutX="34.0" layoutY="126.0" mnemonicParsing="false" onAction="#Mostrar_CrearUsuario" prefHeight="31.0" prefWidth="109.0" text="Nuevo usuario" />

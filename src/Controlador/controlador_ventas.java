@@ -1,4 +1,4 @@
-package controlador_ventas;
+package Controlador;
 
 /**
  * Created by Usuario on 17/11/2016.

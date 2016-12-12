@@ -8,7 +8,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="conexionDB.main_controller_java">
+<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.main_controller_java">
   <children>
     <Accordion layoutX="39.0" layoutY="270.0" prefHeight="400.0" />
     <ImageView id="Add User" fitHeight="31.0" fitWidth="42.0" layoutX="163.0" layoutY="149.0" pickOnBounds="true">
@@ -62,16 +62,16 @@
         <Font name="Cambria Math" size="14.0" fx:id="x1" />
       </font>
     </Label>
-    <TextField fx:id="boton_usuario" layoutX="445.0" layoutY="203.0" prefWidth="164.0" />
+    <TextField fx:id="login_text_field" layoutX="461.0" layoutY="203.0" prefWidth="164.0" />
     <ImageView id="cliente" fitHeight="42.0" fitWidth="42.0" layoutX="352.0" layoutY="195.0" pickOnBounds="true">
       <image>
         <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/cliente.png" />
       </image>
     </ImageView>
     <Label font="$x1" layoutX="366.0" layoutY="265.0" prefHeight="21.0" prefWidth="86.0" text="Contraseña:" />
-    <TextField fx:id="boton_contraseña" layoutX="445.0" layoutY="263.0" prefWidth="164.0" />
+    <TextField fx:id="pass_text_field" layoutX="461.0" layoutY="265.0" prefWidth="164.0" />
     <Button fx:id="boton_ingresar" layoutX="378.0" layoutY="356.0" mnemonicParsing="false" onAction="#handle_boton_ingreso_action" text="Ingresar" />
-    <Button fx:id="boton_salir" layoutX="519.0" layoutY="357.0" mnemonicParsing="false" text="Salir" />
+    <Button fx:id="boton_salir" layoutX="519.0" layoutY="357.0" mnemonicParsing="false" onAction="#handle_boton_salir_action" text="Salir" />
     <ImageView id="contraseña" fitHeight="41.999908447265625" fitWidth="42.0" layoutX="317.0" layoutY="253.0" pickOnBounds="true">
       <image>
         <Image preserveRatio="true" smooth="true" url="@ImagenesProyecto/contraseña.png" />
