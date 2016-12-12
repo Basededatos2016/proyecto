@@ -12,12 +12,12 @@
 <AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.controlador_nuevoUsuario">
   <children>
     <Accordion layoutX="45.0" layoutY="253.0" prefHeight="400.0" />
-    <Button layoutX="45.0" layoutY="190.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Ventas" />
-    <Button layoutX="43.0" layoutY="300.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Reportes" textOverrun="CLIP" />
-    <Button layoutX="45.0" layoutY="358.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Inventario" />
-    <Button layoutX="44.0" layoutY="411.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Cambios" />
-    <ToggleButton layoutX="45.0" layoutY="245.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Búsqueda" />
-    <ToggleButton layoutX="45.0" layoutY="132.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="116.0" text="Nuevo usuario" />
+    <Button layoutX="45.0" layoutY="190.0" mnemonicParsing="false" onAction="#handle_boton_ventas" prefHeight="31.0" prefWidth="116.0" text="Ventas" />
+    <Button layoutX="43.0" layoutY="300.0" mnemonicParsing="false" onAction="#handle_boton_reporte" prefHeight="31.0" prefWidth="116.0" text="Reportes" textOverrun="CLIP" />
+    <Button layoutX="45.0" layoutY="358.0" mnemonicParsing="false" onAction="#handle_boton_inventario" prefHeight="31.0" prefWidth="116.0" text="Inventario" />
+    <Button layoutX="44.0" layoutY="411.0" mnemonicParsing="false" onAction="#handle_boton_cambios" prefHeight="31.0" prefWidth="116.0" text="Cambios" />
+    <ToggleButton layoutX="45.0" layoutY="245.0" mnemonicParsing="false" onAction="#handle_boton_busqueda" prefHeight="31.0" prefWidth="116.0" text="Búsqueda" />
+    <ToggleButton layoutX="45.0" layoutY="132.0" mnemonicParsing="false" onAction="#handle_boton_nuevoUsuario" prefHeight="31.0" prefWidth="116.0" text="Nuevo usuario" />
     <TabPane layoutX="218.0" layoutY="120.0" prefHeight="371.0" prefWidth="531.0" tabClosingPolicy="UNAVAILABLE">
       <tabs>
         <Tab text="Crear usuario">
@@ -60,7 +60,6 @@
                     <Font name="Cambria Math" size="24.0" />
                   </font>
                 </Label>
-                        <Button fx:id="BotonSalir" layoutX="332.0" layoutY="282.0" mnemonicParsing="false" onAction="#handle_boton_salir" text="Salir" />
               </children>
             </AnchorPane>
           </content>
