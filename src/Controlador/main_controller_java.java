@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -18,6 +19,7 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import javafx.scene.control.Label;
 
 /**
  * Clase del cntrolador inicial de la aplicacion.
@@ -35,8 +37,9 @@ public class main_controller_java implements Initializable {
     //@FXML private Connection con;
     @FXML     private boolean accede;
     @FXML     private int permiso;
-    @FXML     private Pane panel;
+    @FXML     private Pane pane;
     @FXML     private Stage stage;
+    @FXML     private Label UsuarioIncorrecto;
 
     /**
      * Inicializa el controlador del JAVAFX que permite
@@ -76,25 +79,13 @@ public class main_controller_java implements Initializable {
             System.out.println("clicked Entrar");
 
             ResultSet rs = db.execute_query("SELECT Login, Contrasena, Permisos FROM Vendedor");
- /*
-            String name = rs.getString("Login");
-            String pass = rs.getString("Contrasena");
-            permiso = rs.getInt("Permisos");
-            System.out.println(name + " " + pass + " " + permiso);
-*/
 
             while (rs.next()) {
-                System.out.println("PRUEBA");
+                //System.out.println("PRUEBA");
 
                 String name = rs.getString("Login");
-                //System.out.println(name);
                 String pass = rs.getString("Contrasena");
-                //System.out.println(pass);
                 permiso = rs.getInt("Permisos");
-                //System.out.println(permiso);
-
-                //System.out.println(login_text_field.getText());
-
 
                 if (login_text_field.getText().equals(name) && pass_text_field.getText().equals(pass)) {
 
@@ -102,40 +93,40 @@ public class main_controller_java implements Initializable {
                     accede = true;
                     permiso = (rs.getInt("Permisos"));
 
+                    /* Pantalla del administrador */
                     if (permiso == 1) {
-                        System.out.println(" Entro sulpick al sistema ");
+                        //System.out.println(" Entro sulpick al sistema ");
 
                         try {
 
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas2.fxml"));
-                            System.out.println(" 6 ");
+                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
                             Parent root = fxmlLoader.load();
-                            System.out.println(" 6 ");
                             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
                             controller.initialize();
 
                             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
+                            Main.primary_stage.setScene(new Scene(root, 1000 , 680));
+                            pane.getChildren().setAll(root);
 
-                            //panel.autosize();
-                            panel.getChildren().setAll(root);
-                            System.out.println(" 9 ");
 
 
                         } catch (IOException e) {
                             e.printStackTrace();
+
                         }
+
+                        /* Pantalla del empleado */
                     } else if (permiso == 2) {
                         try {
 
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(".../Ventanas/Ventas2.fxml"));
-                            Parent root = (Parent)fxmlLoader.load();
+                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
+                            Parent root = fxmlLoader.load();
                             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
-                            //controller.set_user_login(user_login);
                             controller.initialize();
 
-
                             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
-                            //panel.getChildren().setAll(root);
+                            Main.primary_stage.setScene(new Scene(root, 1000 , 680));
+                            pane.getChildren().setAll(root);
 
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -145,9 +136,16 @@ public class main_controller_java implements Initializable {
 
                 }
             }
+
+
         } catch (SQLException err) {
             System.out.println(err);
         }
+
+        if(accede == false){
+            UsuarioIncorrecto.setText("Usuario o contrasehna incorrectos");
+        }
+
     }
 
 
