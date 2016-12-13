@@ -105,6 +105,7 @@ public class main_controller_java implements Initializable {
                             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
                             Main.primary_stage.setScene(new Scene(root, 1000 , 680));
                             pane.getChildren().setAll(root);
+                            controller.initialize(null,null);
 
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -118,7 +119,7 @@ public class main_controller_java implements Initializable {
                             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
                             Parent root = fxmlLoader.load();
                             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
-                            //controller.initialize(null,null);
+                            controller.initialize(null,null);
 
                             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
                             Main.primary_stage.setScene(new Scene(root, 1000 , 680));

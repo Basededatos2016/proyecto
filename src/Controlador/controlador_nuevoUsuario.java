@@ -20,13 +20,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.scene.control.Label;
-
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TabPane;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  * Created by sulpickb on 11/12/16.
  */
 public class controlador_nuevoUsuario {
 
+    @FXML     private AnchorPane InsideCreaUsuario;
+    @FXML     private TabPane creaUsuario;
     @FXML     private TextField CedulaUsuario;
     @FXML     private TextField TelefonoPrimero;
     @FXML     private TextField TelefonoSegundo;
@@ -43,11 +48,35 @@ public class controlador_nuevoUsuario {
     @FXML     private String Contrasena;
     @FXML     private String Cedula;
     @FXML     private conexion_db db = new conexion_db();
-    @FXML     private Pane pane;
+    @FXML     private AnchorPane pane;
+    @FXML     private ComboBox lista;
+    @FXML     private String tipoCedula;
+
+    /**
+    ObservableList<String> items = FXCollections.observableArrayList();
+    items.addAll("item-1", "item-2", "item-3", "item-4", "item-5");
+
+    ComboBox<String> cbx = new ComboBox<>(items);
+    StackPane pane = new StackPane(cbx);
+
+    Scene scene = new Scene(pane, 250, 150);
+    stage.setTitle("ComboBox JavaFX");
+    stage.setScene(scene);
+    stage.show();
+**/
 
 
-    @FXML    protected void handle_boton_guardar(ActionEvent event) {
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
+
+
+        @FXML    protected void handle_boton_guardar(ActionEvent event) {
         try {
+
+
+          //  tipoCedula = lista.toString();
             Cedula = CedulaUsuario.getText();
             Nombre = NombreUsuario.getText();
             Apellido = ApellidoUsuario.getText();
@@ -55,6 +84,7 @@ public class controlador_nuevoUsuario {
             Direccion = DireccionUsuario.getText();
             Usuario = loginUsuario.getText();
             Contrasena = contrasenaUsuario.getText();
+
 
             String query = "INSERT INTO Persona (Cedula, Nombre, Apellido, Telefono, Direccion) " +
                     "VALUES ( '" + Cedula + "'"+ "'" + Nombre + "'" + Apellido + "'" + "'" +Telefono + "'" +
@@ -67,18 +97,22 @@ public class controlador_nuevoUsuario {
         }
 
 
+
+
     }
 
     @FXML protected void handle_boton_nuevoUsuario(ActionEvent event){
         try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/CrearUsuario.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/PruebaUsuario.fxml"));
             Parent root = fxmlLoader.load();
             controlador_nuevoUsuario controller = fxmlLoader.<controlador_nuevoUsuario>getController();
 
             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
             Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
+
+
         }
         catch(Exception e){
             e.printStackTrace();
@@ -94,7 +128,7 @@ public class controlador_nuevoUsuario {
             Parent root = fxmlLoader.load();
             controlador_buscar controller = fxmlLoader.<controlador_buscar>getController();
 
-            Main.primary_stage.setTitle("Busqueda de Productos");
+            Main.primary_stage.setTitle("Busqueda de Productos en Claqueta");
             Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
@@ -110,7 +144,7 @@ public class controlador_nuevoUsuario {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Reportes.fxml"));
             Parent root = fxmlLoader.load();
             controlador_reporte controller = fxmlLoader.<controlador_reporte>getController();
-            Main.primary_stage.setTitle("Reportes de Productos");
+            Main.primary_stage.setTitle("Reportes de Productos en Claqueta");
             Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
@@ -126,7 +160,7 @@ public class controlador_nuevoUsuario {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/inventario.fxml"));
             Parent root = fxmlLoader.load();
             controlador_inventario controller = fxmlLoader.<controlador_inventario>getController();
-            Main.primary_stage.setTitle("Inventario de Productos");
+            Main.primary_stage.setTitle("Inventario de Productos en Claqueta");
             Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
@@ -143,8 +177,8 @@ public class controlador_nuevoUsuario {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Cambios.fxml"));
             Parent root = fxmlLoader.load();
             controlador_cambios controller = fxmlLoader.<controlador_cambios>getController();
-            Main.primary_stage.setTitle("Cambio de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
+            Main.primary_stage.setTitle("Cambio de Productos en Claqueta");
+            Main.primary_stage.setScene(new Scene(root, 800, 1000));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){

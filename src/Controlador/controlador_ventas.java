@@ -39,18 +39,30 @@ public class controlador_ventas {
      @FXML     private Label UsuarioIncorrecto;
 
 
+
+    public void initialize(URL location, ResourceBundle resources) {
+        /** esta colocando valores de administrador por defecto */
+        // todo temp setting to expedite login process.
+        //this.user_text_field.setText("jose");  //doctor
+        //this.user_text_field.setText("adm");   //admin
+//
+        // this.login_text_field.setText("sulpick");        //reception
+        //this.pass_text_field.setText("hola");
+    }
+
     /** Muestra la ventana para la creacion del usuario **/
 
     @FXML protected void handle_boton_NuevoUsuario(ActionEvent event){
         try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/CrearUsuario.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/PruebaUsuario.fxml"));
             Parent root = fxmlLoader.load();
             controlador_nuevoUsuario controller = fxmlLoader.<controlador_nuevoUsuario>getController();
 
             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
             Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
+            controller.initialize(null,null);
         }
         catch(Exception e){
             e.printStackTrace();

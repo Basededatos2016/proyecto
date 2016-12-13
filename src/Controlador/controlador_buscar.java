@@ -119,7 +119,7 @@ public class controlador_buscar{
             Parent root = fxmlLoader.load();
             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
             Main.primary_stage.setTitle("Cambio de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
+            Main.primary_stage.setScene(new Scene(root, 800, 1000));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){

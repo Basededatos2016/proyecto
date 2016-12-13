@@ -13,7 +13,7 @@
   <children>
     <Accordion layoutX="32.0" layoutY="228.0" prefHeight="400.0" />
     <Button layoutX="34.0" layoutY="125.0" mnemonicParsing="false" onAction="#handle_boton_nuevoUsuario" prefHeight="31.0" prefWidth="116.0" text="Nuevo usuario" />
-    <Button layoutX="34.0" layoutY="184.0" mnemonicParsing="false" onAction="#handle_botonVentas" prefHeight="31.0" prefWidth="109.0" text="Ventas" />
+    <Button layoutX="34.0" layoutY="184.0" mnemonicParsing="false" onAction="#handle_boton_ventas" prefHeight="31.0" prefWidth="109.0" text="Ventas" />
     <Button layoutX="32.0" layoutY="294.0" mnemonicParsing="false" onAction="#handle_botonReporte" prefHeight="31.0" prefWidth="109.0" text="Reportes" textOverrun="CLIP" />
     <Button layoutX="34.0" layoutY="358.0" mnemonicParsing="false" onAction="#handle_boton_inventario" prefHeight="31.0" prefWidth="109.0" text="Inventario" />
     <Button layoutX="32.0" layoutY="413.0" mnemonicParsing="false" onAction="#handle_boton_cambios" prefHeight="31.0" prefWidth="109.0" text="Cambios" />
