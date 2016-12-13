@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 /**
  * Created by Evely on 21/11/2016.
  */
-public class controlador_buscar{
+public class controlador_buscar implements  Initializable{
 
     //@FXML private Button ventas;
    // @FXML     private conexion_db db = new conexion_db();

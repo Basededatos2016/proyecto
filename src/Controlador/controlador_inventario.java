@@ -5,6 +5,7 @@ import conexionDB.conexion_db;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -15,10 +16,11 @@ import java.util.ResourceBundle;
 /**
  * Created by sulpickb on 12/12/16.
  */
-public class controlador_inventario {
+public class controlador_inventario implements Initializable
+{
 
 
-    //@FXML    private conexion_db db = new conexion_db();
+    @FXML    private conexion_db db = new conexion_db();
     @FXML     private Pane pane;
 
     public void initialize(URL location, ResourceBundle resources) {

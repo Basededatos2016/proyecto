@@ -5,6 +5,7 @@ import conexionDB.conexion_db;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -15,7 +16,8 @@ import java.util.ResourceBundle;
 /**
  * Created by sulpickb on 12/12/16.
  */
-public class controlador_reporte {
+public class controlador_reporte implements Initializable
+{
 
     @FXML     private conexion_db db = new conexion_db();
     @FXML     private Pane pane;
@@ -23,8 +25,6 @@ public class controlador_reporte {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
-
 
 
     @FXML protected void handle_boton_busqueda(ActionEvent event){
@@ -119,13 +119,12 @@ public class controlador_reporte {
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/CrearUsuario.fxml"));
-            Parent root = fxmlLoader.load();
+            Parent root = (Parent)fxmlLoader.load();
             controlador_nuevoUsuario controller = fxmlLoader.<controlador_nuevoUsuario>getController();
             controller.initialize(null, null);
-
-
             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
             pane.getChildren().setAll(root);
+
         }
         catch(Exception e){
             e.printStackTrace();
