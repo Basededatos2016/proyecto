@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.main_controller_java">
-  <children>
-    <Accordion layoutX="39.0" layoutY="270.0" prefHeight="400.0" />
-    <Label alignment="CENTER" layoutX="141.0" layoutY="93.0" prefWidth="475.0" text="BIENVENIDO A CLAQUETA TIENDA DE CINE">
-      <font>
-        <Font name="Cambria Math" size="22.0" />
-      </font>
-    </Label>
-    <Label layoutX="250.0" layoutY="193.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Usuario:">
-      <font>
-        <Font name="Cambria Math" size="14.0" fx:id="x1" />
-      </font>
-    </Label>
-    <TextField fx:id="login_text_field" layoutX="366.0" layoutY="191.0" prefWidth="164.0" />
-    <Label font="$x1" layoutX="239.0" layoutY="255.0" prefHeight="21.0" prefWidth="86.0" text="Contraseña:" />
-    <TextField fx:id="pass_text_field" layoutX="366.0" layoutY="253.0" prefWidth="164.0" />
-    <Button fx:id="boton_ingresar" layoutX="330.0" layoutY="357.0" mnemonicParsing="false" onAction="#handle_boton_ingreso_action" text="Ingresar" />
-    <Button fx:id="boton_salir" layoutX="507.0" layoutY="357.0" mnemonicParsing="false" onAction="#handle_boton_salir_action" text="Salir" />
-      <Label fx:id="UsuarioIncorrecto" layoutX="39.0" layoutY="460.0" prefHeight="21.0" prefWidth="385.0" />
-  </children>
-</AnchorPane>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.main_controller_java">
+   <children>
+      <Label alignment="CENTER" layoutX="85.0" layoutY="52.0" prefWidth="475.0" text="BIENVENIDO A CLAQUETA TIENDA DE CINE">
+         <font>
+            <Font name="Cambria Math" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="login_text_field" layoutX="276.0" layoutY="139.0" prefWidth="164.0" />
+      <Label layoutX="160.0" layoutY="141.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Usuario:">
+         <font>
+            <Font name="Cambria Math" size="14.0" fx:id="x1" />
+         </font>
+      </Label>
+      <Label font="$x1" layoutX="149.0" layoutY="212.0" prefHeight="21.0" prefWidth="86.0" text="Contraseña:" />
+      <Button fx:id="boton_salir" layoutX="369.0" layoutY="297.0" mnemonicParsing="false" onAction="#handle_boton_salir_action" text="Salir" />
+      <Button fx:id="boton_ingresar" layoutX="192.0" layoutY="297.0" mnemonicParsing="false" onAction="#handle_boton_ingreso_action" text="Ingresar" />
+      <PasswordField fx:id="pass_text_field" layoutX="273.0" layoutY="218.0" />
+   </children>
+</Pane>

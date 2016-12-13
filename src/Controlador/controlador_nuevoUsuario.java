@@ -28,9 +28,8 @@ import javafx.collections.ObservableList;
 /**
  * Created by sulpickb on 11/12/16.
  */
-public class controlador_nuevoUsuario {
+public class controlador_nuevoUsuario implements Initializable  {
 
-    @FXML     private AnchorPane InsideCreaUsuario;
     @FXML     private TabPane creaUsuario;
     @FXML     private TextField CedulaUsuario;
     @FXML     private TextField TelefonoPrimero;
@@ -48,7 +47,7 @@ public class controlador_nuevoUsuario {
     @FXML     private String Contrasena;
     @FXML     private String Cedula;
     @FXML     private conexion_db db = new conexion_db();
-    @FXML     private AnchorPane pane;
+    @FXML     private Pane pane;
     @FXML     private ComboBox lista;
     @FXML     private String tipoCedula;
 
@@ -67,6 +66,8 @@ public class controlador_nuevoUsuario {
 
 
     public void initialize(URL location, ResourceBundle resources) {
+
+
 
     }
 
@@ -109,7 +110,6 @@ public class controlador_nuevoUsuario {
             controlador_nuevoUsuario controller = fxmlLoader.<controlador_nuevoUsuario>getController();
 
             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
 
 
@@ -129,7 +129,6 @@ public class controlador_nuevoUsuario {
             controlador_buscar controller = fxmlLoader.<controlador_buscar>getController();
 
             Main.primary_stage.setTitle("Busqueda de Productos en Claqueta");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -145,7 +144,6 @@ public class controlador_nuevoUsuario {
             Parent root = fxmlLoader.load();
             controlador_reporte controller = fxmlLoader.<controlador_reporte>getController();
             Main.primary_stage.setTitle("Reportes de Productos en Claqueta");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -161,7 +159,6 @@ public class controlador_nuevoUsuario {
             Parent root = fxmlLoader.load();
             controlador_inventario controller = fxmlLoader.<controlador_inventario>getController();
             Main.primary_stage.setTitle("Inventario de Productos en Claqueta");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -178,7 +175,6 @@ public class controlador_nuevoUsuario {
             Parent root = fxmlLoader.load();
             controlador_cambios controller = fxmlLoader.<controlador_cambios>getController();
             Main.primary_stage.setTitle("Cambio de Productos en Claqueta");
-            Main.primary_stage.setScene(new Scene(root, 800, 1000));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -195,7 +191,6 @@ public class controlador_nuevoUsuario {
             Parent root = fxmlLoader.load();
             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
             Main.primary_stage.setTitle("Nuevo usuario en Claqueta");
-            Main.primary_stage.setScene(new Scene(root, 1000, 750));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){

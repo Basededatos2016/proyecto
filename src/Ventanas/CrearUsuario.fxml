@@ -1,64 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.collections.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.controlador_nuevoUsuario">
-  <children>
-    <Accordion layoutX="45.0" layoutY="253.0" prefHeight="400.0" />
-    <Button layoutX="45.0" layoutY="190.0" mnemonicParsing="false" onAction="#handle_boton_ventas" prefHeight="31.0" prefWidth="116.0" text="Ventas" />
-    <Button layoutX="43.0" layoutY="300.0" mnemonicParsing="false" onAction="#handle_boton_reporte" prefHeight="31.0" prefWidth="116.0" text="Reportes" textOverrun="CLIP" />
-    <Button layoutX="45.0" layoutY="358.0" mnemonicParsing="false" onAction="#handle_boton_inventario" prefHeight="31.0" prefWidth="116.0" text="Inventario" />
-    <Button layoutX="44.0" layoutY="411.0" mnemonicParsing="false" onAction="#handle_boton_cambios" prefHeight="31.0" prefWidth="116.0" text="Cambios" />
-    <ToggleButton layoutX="45.0" layoutY="245.0" mnemonicParsing="false" onAction="#handle_boton_busqueda" prefHeight="31.0" prefWidth="116.0" text="Búsqueda" />
-<TextField fx:id="CedulaUsuario" layoutX="334.0" layoutY="116.0" prefWidth="89.0" />
-<ComboBox fx:id="lista" layoutX="273.0" layoutY="117.0" minWidth="28.0" prefHeight="21.0" prefWidth="42.0">
-                   </ComboBox>
-    <ToggleButton layoutX="45.0" layoutY="132.0" mnemonicParsing="false" onAction="#handle_boton_nuevoUsuario" prefHeight="31.0" prefWidth="116.0" text="Nuevo usuario" />
-    <TabPane fx:id="creaUsuario" layoutX="208.0" layoutY="157.0" prefHeight="371.0" prefWidth="531.0" tabClosingPolicy="UNAVAILABLE">
-      <tabs>
-        <Tab text="Crear usuario">
-          <content>
-            <AnchorPane id="Content" fx:id="InsideCreaUsuario" minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="500.0">
-              <children>
-                <Button fx:id="BotonGuardar" layoutX="122.0" layoutY="282.0" mnemonicParsing="false" onAction="#handle_boton_guardar" text="Guardar" />
-                <Button fx:id="BotonLimpiar" layoutX="226.0" layoutY="282.0" mnemonicParsing="false" text="Limpiar" />
-                <Label layoutX="14.0" layoutY="130.0" prefHeight="21.0" prefWidth="72.0" text="Nombre:">
-                  <font>
-                    <Font name="Cambria Math" size="14.0" fx:id="x1" />
-                  </font>
-                </Label>
-                <TextField fx:id="NombreUsuario" layoutX="86.0" layoutY="129.0" prefWidth="125.0" />
-                <Label font="$x1" layoutX="247.0" layoutY="130.0" prefHeight="22.0" prefWidth="91.0" text="Apellido:" />
-                <TextField fx:id="ApellidoUsuario" layoutX="320.0" layoutY="130.0" prefWidth="157.0" />
-                <Label font="$x1" layoutX="28.0" layoutY="173.0" prefHeight="22.0" prefWidth="79.0" text="Dirección:" />
-                <TextField fx:id="DireccionUsuario" layoutX="110.0" layoutY="173.0" prefHeight="25.0" prefWidth="367.0" />
-                <Label font="$x1" layoutX="28.0" layoutY="219.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Usuario:" />
-                <TextField fx:id="loginUsuario" layoutX="96.0" layoutY="218.0" prefWidth="125.0" />
-                <Label font="$x1" layoutX="241.0" layoutY="219.0" prefHeight="22.0" prefWidth="101.0" text="Constraseña:" />
-                <TextField fx:id="contrasenaUsuario" layoutX="350.0" layoutY="218.0" prefWidth="157.0" />
-              </children>
-            </AnchorPane>
-          </content>
-        </Tab>
-      </tabs>
-    </TabPane>
-<Label layoutX="339.0" layoutY="53.0" prefHeight="34.0" prefWidth="275.0" text="Ingreso de usuario ">
-<font>
-  <Font name="Cambria Math" size="24.0" />
-</font>
-</Label>
-<Label layoutX="324.0" layoutY="119.0" text="-" />
-<Label font="$x1" layoutX="208.0" layoutY="116.0" prefHeight="22.0" prefWidth="64.0" text="Cédula:" />
-<Label font="$x1" layoutX="487.0" layoutY="113.0" prefHeight="21.0" prefWidth="76.0" text="Teléfono:" />
-<TextField fx:id="TelefonoPrimero" layoutX="569.0" layoutY="112.0" prefWidth="30.0" />
-<Label layoutX="607.0" layoutY="115.0" text="-" />
-<TextField fx:id="TelefonoSegundo" layoutX="629.0" layoutY="110.0" prefWidth="118.0" />
-  </children>
-</AnchorPane>
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.controlador_nuevoUsuario">
+   <children>
+      <ToggleButton layoutX="22.0" layoutY="58.0" mnemonicParsing="false" onAction="#handle_boton_nuevoUsuario" prefHeight="31.0" prefWidth="116.0" text="Nuevo usuario" />
+      <ToggleButton layoutX="22.0" layoutY="171.0" mnemonicParsing="false" onAction="#handle_boton_busqueda" prefHeight="31.0" prefWidth="116.0" text="Búsqueda" />
+      <Button layoutX="21.0" layoutY="337.0" mnemonicParsing="false" onAction="#handle_boton_cambios" prefHeight="31.0" prefWidth="116.0" text="Cambios" />
+      <Button layoutX="22.0" layoutY="284.0" mnemonicParsing="false" onAction="#handle_boton_inventario" prefHeight="31.0" prefWidth="116.0" text="Inventario" />
+      <Button layoutX="20.0" layoutY="226.0" mnemonicParsing="false" onAction="#handle_boton_reporte" prefHeight="31.0" prefWidth="116.0" text="Reportes" textOverrun="CLIP" />
+      <Button layoutX="22.0" layoutY="116.0" mnemonicParsing="false" onAction="#handle_boton_ventas" prefHeight="31.0" prefWidth="116.0" text="Ventas" />
+      <TabPane layoutX="204.0" layoutY="51.0" prefHeight="371.0" prefWidth="531.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Crear usuario">
+               <content>
+                  <AnchorPane id="Content" fx:id="InsideCreaUsuario" minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="500.0">
+                     <children>
+                        <Button fx:id="BotonGuardar" layoutX="122.0" layoutY="282.0" mnemonicParsing="false" onAction="#handle_boton_guardar" text="Guardar" />
+                        <Button fx:id="BotonLimpiar" layoutX="274.0" layoutY="282.0" mnemonicParsing="false" text="Limpiar" />
+                        <Label layoutX="14.0" layoutY="130.0" prefHeight="21.0" prefWidth="72.0" text="Nombre:">
+                           <font>
+                              <Font name="Cambria Math" size="14.0" fx:id="x1" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="NombreUsuario" layoutX="86.0" layoutY="129.0" prefWidth="125.0" />
+                        <Label font="$x1" layoutX="247.0" layoutY="130.0" prefHeight="22.0" prefWidth="91.0" text="Apellido:" />
+                        <TextField fx:id="ApellidoUsuario" layoutX="320.0" layoutY="130.0" prefWidth="157.0" />
+                        <Label font="$x1" layoutX="28.0" layoutY="173.0" prefHeight="22.0" prefWidth="79.0" text="Dirección:" />
+                        <TextField fx:id="DireccionUsuario" layoutX="110.0" layoutY="173.0" prefHeight="25.0" prefWidth="367.0" />
+                        <Label font="$x1" layoutX="28.0" layoutY="219.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Usuario:" />
+                        <TextField fx:id="loginUsuario" layoutX="96.0" layoutY="218.0" prefWidth="125.0" />
+                        <Label font="$x1" layoutX="241.0" layoutY="219.0" prefHeight="22.0" prefWidth="101.0" text="Constraseña:" />
+                        <TextField fx:id="contrasenaUsuario" layoutX="350.0" layoutY="218.0" prefWidth="157.0" />
+                        <TextField fx:id="CedulaUsuario" layoutX="122.0" layoutY="71.0" prefWidth="89.0" />
+                        <Label layoutX="112.0" layoutY="76.0" text="-" />
+                        <ComboBox fx:id="lista" layoutX="60.0" layoutY="72.0" minWidth="28.0" prefHeight="21.0" prefWidth="42.0" />
+                        <Label font="$x1" layoutX="4.0" layoutY="73.0" prefHeight="22.0" prefWidth="64.0" text="Cédula:" />
+                        <TextField fx:id="TelefonoSegundo" layoutX="354.0" layoutY="71.0" prefWidth="118.0" />
+                        <Label layoutX="340.0" layoutY="77.0" text="-" />
+                        <TextField fx:id="TelefonoPrimero" layoutX="307.0" layoutY="69.0" prefWidth="30.0" />
+                        <Label font="$x1" layoutX="232.0" layoutY="72.0" prefHeight="21.0" prefWidth="76.0" text="Teléfono:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</Pane>

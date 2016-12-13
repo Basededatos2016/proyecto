@@ -25,29 +25,18 @@ import javafx.scene.control.Label;
 /**
  * Created by sulpickb on 12/12/16.
  */
-public class controlador_ventas {
+public class controlador_ventas implements Initializable  {
 
 
-
-     @FXML     private javafx.scene.control.Button botonNuevoUsuario;
-     @FXML     private javafx.scene.control.Button boton_salir;
-    // @FXML     private conexion_db db = new conexion_db(); //instancia la conexion a la base de datos.
-     @FXML     private boolean accede;
-     @FXML     private int permiso;
      @FXML     private Pane pane;
-     @FXML     private Stage stage;
      @FXML     private Label UsuarioIncorrecto;
 
 
 
     public void initialize(URL location, ResourceBundle resources) {
-        /** esta colocando valores de administrador por defecto */
-        // todo temp setting to expedite login process.
-        //this.user_text_field.setText("jose");  //doctor
-        //this.user_text_field.setText("adm");   //admin
-//
-        // this.login_text_field.setText("sulpick");        //reception
-        //this.pass_text_field.setText("hola");
+
+
+
     }
 
     /** Muestra la ventana para la creacion del usuario **/
@@ -55,14 +44,18 @@ public class controlador_ventas {
     @FXML protected void handle_boton_NuevoUsuario(ActionEvent event){
         try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/PruebaUsuario.fxml"));
-            Parent root = fxmlLoader.load();
-            controlador_nuevoUsuario controller = fxmlLoader.<controlador_nuevoUsuario>getController();
+            //Pane mainPane = FXMLLoader.load(getClass().getResource("../Ventanas/CrearUsuario.fxml"));
 
-            Main.primary_stage.setTitle("Claqueta tu tienda de cine");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/CrearUsuario.fxml"));
+
+            Parent root = (Parent)fxmlLoader.load();
+            controlador_nuevoUsuario controller = fxmlLoader.<controlador_nuevoUsuario>getController();
+            controller.initialize(null, null);
+            Main.primary_stage.setTitle("Recepcion | Gimnasio Impacto (C) 2016");
             pane.getChildren().setAll(root);
-            controller.initialize(null,null);
+
+
         }
         catch(Exception e){
             e.printStackTrace();
@@ -80,12 +73,14 @@ public class controlador_ventas {
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/BuscarProducto.fxml"));
-            Parent root = fxmlLoader.load();
+            Parent root = (Parent)fxmlLoader.load();
             controlador_buscar controller = fxmlLoader.<controlador_buscar>getController();
+            controller.initialize(null, null);
 
-            Main.primary_stage.setTitle("Busqueda de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
+            Main.primary_stage.setTitle("Recepcion | Gimnasio Impacto (C) 2016");
             pane.getChildren().setAll(root);
+
+
         }
         catch(Exception e){
             e.printStackTrace();
@@ -100,7 +95,6 @@ public class controlador_ventas {
             Parent root = fxmlLoader.load();
             controlador_reporte controller = fxmlLoader.<controlador_reporte>getController();
             Main.primary_stage.setTitle("Reportes de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -116,7 +110,6 @@ public class controlador_ventas {
             Parent root = fxmlLoader.load();
             controlador_inventario controller = fxmlLoader.<controlador_inventario>getController();
             Main.primary_stage.setTitle("Inventario de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -133,7 +126,6 @@ public class controlador_ventas {
             Parent root = fxmlLoader.load();
             controlador_cambios controller = fxmlLoader.<controlador_cambios>getController();
             Main.primary_stage.setTitle("Cambio de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -150,7 +142,6 @@ public class controlador_ventas {
             Parent root = fxmlLoader.load();
             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
             Main.primary_stage.setTitle("Cambio de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){

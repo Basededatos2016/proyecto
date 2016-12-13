@@ -9,6 +9,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 /**
  * Created by sulpickb on 12/12/16.
  */
@@ -17,6 +20,10 @@ public class controlador_inventario {
 
     //@FXML    private conexion_db db = new conexion_db();
     @FXML     private Pane pane;
+
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 
 
 
@@ -28,7 +35,6 @@ public class controlador_inventario {
             controlador_buscar controller = fxmlLoader.<controlador_buscar>getController();
 
             Main.primary_stage.setTitle("Busqueda de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -44,7 +50,6 @@ public class controlador_inventario {
             Parent root = fxmlLoader.load();
             controlador_reporte controller = fxmlLoader.<controlador_reporte>getController();
             Main.primary_stage.setTitle("Reportes de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -60,7 +65,6 @@ public class controlador_inventario {
             Parent root = fxmlLoader.load();
             controlador_inventario controller = fxmlLoader.<controlador_inventario>getController();
             Main.primary_stage.setTitle("Inventario de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -77,7 +81,6 @@ public class controlador_inventario {
             Parent root = fxmlLoader.load();
             controlador_cambios controller = fxmlLoader.<controlador_cambios>getController();
             Main.primary_stage.setTitle("Cambio de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -86,7 +89,6 @@ public class controlador_inventario {
 
     }
 
-
     @FXML protected void handle_boton_ventas(ActionEvent event){
         try {
 
@@ -94,7 +96,6 @@ public class controlador_inventario {
             Parent root = fxmlLoader.load();
             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
             Main.primary_stage.setTitle("Cambio de Productos");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -111,7 +112,6 @@ public class controlador_inventario {
             controlador_nuevoUsuario controller = fxmlLoader.<controlador_nuevoUsuario>getController();
 
             Main.primary_stage.setTitle("Claqueta tu tienda de cine");
-            Main.primary_stage.setScene(new Scene(root, 800, 680));
             pane.getChildren().setAll(root);
         }
         catch(Exception e){

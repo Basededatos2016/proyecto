@@ -58,8 +58,8 @@ public class main_controller_java implements Initializable {
         //this.user_text_field.setText("jose");  //doctor
         //this.user_text_field.setText("adm");   //admin
 //
-        // this.login_text_field.setText("sulpick");        //reception
-        //this.pass_text_field.setText("hola");
+        this.login_text_field.setText("sulpick");        //reception
+        this.pass_text_field.setText("hola");
     }
 
     /**
@@ -98,14 +98,15 @@ public class main_controller_java implements Initializable {
 
                         try {
 
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
-                            Parent root = fxmlLoader.load();
-                            controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
+                          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
 
-                            Main.primary_stage.setTitle("Claqueta tu tienda de cine");
-                            Main.primary_stage.setScene(new Scene(root, 1000 , 680));
-                            pane.getChildren().setAll(root);
-                            controller.initialize(null,null);
+                          Parent root = (Parent)fxmlLoader.load();
+                          controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
+                          controller.initialize(null, null);
+
+                          Main.primary_stage.setTitle("Recepcion | Gimnasio Impacto (C) 2016");
+
+                          pane.getChildren().setAll(root);
 
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -116,14 +117,15 @@ public class main_controller_java implements Initializable {
                     } else if (permiso == 2) {
                         try {
 
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
-                            Parent root = fxmlLoader.load();
-                            controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
-                            controller.initialize(null,null);
+                          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
 
-                            Main.primary_stage.setTitle("Claqueta tu tienda de cine");
-                            Main.primary_stage.setScene(new Scene(root, 1000 , 680));
-                            pane.getChildren().setAll(root);
+                          Parent root = (Parent)fxmlLoader.load();
+                          controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
+                          controller.initialize(null, null);
+
+                          Main.primary_stage.setTitle("Recepcion | Gimnasio Impacto (C) 2016");
+
+                          pane.getChildren().setAll(root);
 
                         } catch (IOException e) {
                             e.printStackTrace();

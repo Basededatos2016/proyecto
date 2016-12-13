@@ -1,37 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0000999999975" prefWidth="974.9999220703176" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.controlador_ventas">
-  <children>
-    <Pane layoutX="-6.0" layoutY="0.0" prefHeight="631.0" prefWidth="987.0">
-      <children>
-        <ToggleButton layoutX="62.0" layoutY="194.0" mnemonicParsing="false" onAction="#handle_boton_NuevoUsuario" prefHeight="29.0" prefWidth="126.0" text="Nuevo usuario" />
-        <ToggleButton layoutX="61.0" layoutY="248.0" mnemonicParsing="false" onAction="#handle_boton_ventas" prefHeight="29.0" prefWidth="126.0" text="Ventas" />
-        <ToggleButton layoutX="61.0" layoutY="300.0" mnemonicParsing="false" onAction="#handle_boton_busqueda" prefHeight="29.0" prefWidth="126.0" text="Busqueda" />
-        <ToggleButton layoutX="61.0" layoutY="360.0" mnemonicParsing="false" onAction="#handle_boton_reporte" prefHeight="29.0" prefWidth="126.0" text="Reportes" />
-        <ToggleButton layoutX="61.0" layoutY="417.0" mnemonicParsing="false" onAction="#handle_boton_inventario" prefHeight="29.0" prefWidth="126.0" text="Inventario" />
-        <ToggleButton layoutX="61.0" layoutY="476.0" mnemonicParsing="false" onAction="#handle_boton_cambios" prefHeight="29.0" prefWidth="126.0" text="Cambios" />
-        <Button layoutX="60.0" layoutY="537.0" mnemonicParsing="false" onAction="#boton_salir" prefHeight="29.0" prefWidth="126.0" text="Salir del sistema" />
-        <TextField layoutX="344.0" layoutY="423.0" prefWidth="531.000022070315" />
-        <TreeView layoutX="344.0" layoutY="88.0" prefHeight="316.0" prefWidth="608.9998779296875" />
-        <RadioButton layoutX="344.0" layoutY="490.0" mnemonicParsing="false" text="Efectivo" />
-        <RadioButton layoutX="344.0" layoutY="518.0" mnemonicParsing="false" text="Transferencia" />
-        <TextField layoutX="434.0" layoutY="545.0" prefHeight="20.9609375" prefWidth="200.0" />
-        <Label layoutX="345.0" layoutY="545.0" prefWidth="90.0" text="N° Referencia" />
-        <Button layoutX="841.0" layoutY="562.0" mnemonicParsing="false" prefWidth="110.0" text="Anular factura" />
-        <Button layoutX="841.0" layoutY="527.0" mnemonicParsing="false" prefWidth="110.0" text="Facturar" />
-        <Button layoutX="841.0" layoutY="494.0" mnemonicParsing="false" prefWidth="109.99990000000253" text="Monto completo" />
-        <Label layoutX="345.0" layoutY="577.0" prefWidth="75.0" text="Descuento" />
-        <TextField layoutX="434.0" layoutY="574.0" prefHeight="20.9609375" prefWidth="34.53594970703125" />
-        <Label layoutX="478.0" layoutY="577.0" prefWidth="10.5" text="\%" />
-        <Button layoutX="899.0" layoutY="424.0" mnemonicParsing="false" text="B" />
-      </children>
-    </Pane>
-  </children>
-</AnchorPane>
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.controlador_ventas">
+   <children>
+      <Button layoutX="857.0" layoutY="372.0" mnemonicParsing="false" text="B" />
+      <Label layoutX="436.0" layoutY="525.0" prefWidth="10.5" text="\%" />
+      <TextField layoutX="392.0" layoutY="522.0" prefHeight="20.9609375" prefWidth="34.53594970703125" />
+      <Label layoutX="303.0" layoutY="525.0" prefWidth="75.0" text="Descuento" />
+      <Button layoutX="799.0" layoutY="442.0" mnemonicParsing="false" prefWidth="109.99990000000253" text="Monto completo" />
+      <Button layoutX="799.0" layoutY="475.0" mnemonicParsing="false" prefWidth="110.0" text="Facturar" />
+      <Button layoutX="799.0" layoutY="510.0" mnemonicParsing="false" prefWidth="110.0" text="Anular factura" />
+      <Label layoutX="193.0" layoutY="377.0" prefHeight="15.0" prefWidth="110.0" text="N° Referencia" />
+      <TextField layoutX="392.0" layoutY="493.0" prefHeight="20.9609375" prefWidth="200.0" />
+      <RadioButton layoutX="302.0" layoutY="466.0" mnemonicParsing="false" text="Transferencia" />
+      <RadioButton layoutX="302.0" layoutY="438.0" mnemonicParsing="false" text="Efectivo" />
+      <TreeView layoutX="302.0" layoutY="36.0" prefHeight="316.0" prefWidth="608.9998779296875" />
+      <TextField layoutX="302.0" layoutY="371.0" prefWidth="531.000022070315" />
+      <Button layoutX="18.0" layoutY="485.0" mnemonicParsing="false" onAction="#boton_salir" prefHeight="29.0" prefWidth="126.0" text="Salir del sistema" />
+      <ToggleButton layoutX="19.0" layoutY="424.0" mnemonicParsing="false" onAction="#handle_boton_cambios" prefHeight="29.0" prefWidth="126.0" text="Cambios" />
+      <ToggleButton layoutX="19.0" layoutY="365.0" mnemonicParsing="false" onAction="#handle_boton_inventario" prefHeight="29.0" prefWidth="126.0" text="Inventario" />
+      <ToggleButton layoutX="19.0" layoutY="308.0" mnemonicParsing="false" onAction="#handle_boton_reporte" prefHeight="29.0" prefWidth="126.0" text="Reportes" />
+      <ToggleButton layoutX="19.0" layoutY="248.0" mnemonicParsing="false" onAction="#handle_boton_busqueda" prefHeight="29.0" prefWidth="126.0" text="Busqueda" />
+      <ToggleButton layoutX="19.0" layoutY="196.0" mnemonicParsing="false" onAction="#handle_boton_ventas" prefHeight="29.0" prefWidth="126.0" text="Ventas" />
+      <ToggleButton layoutX="20.0" layoutY="142.0" mnemonicParsing="false" onAction="#handle_boton_NuevoUsuario" prefHeight="29.0" prefWidth="126.0" text="Nuevo usuario" />
+   </children>
+</Pane>
