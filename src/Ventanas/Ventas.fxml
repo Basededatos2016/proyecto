@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
 <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.controlador_ventas">
    <children>
-      <Button layoutX="849.0" layoutY="371.0" mnemonicParsing="false" text="B" />
+      <Button layoutX="849.0" layoutY="383.0" mnemonicParsing="false" text="B" />
       <Label layoutX="436.0" layoutY="525.0" prefWidth="10.5" text="\%" />
       <TextField layoutX="392.0" layoutY="522.0" prefHeight="20.9609375" prefWidth="34.53594970703125" />
       <Label layoutX="303.0" layoutY="525.0" prefWidth="75.0" text="Descuento" />
@@ -17,8 +18,7 @@
       <TextField layoutX="464.0" layoutY="493.0" prefHeight="20.9609375" prefWidth="200.0" />
       <RadioButton layoutX="302.0" layoutY="466.0" mnemonicParsing="false" text="Transferencia" />
       <RadioButton layoutX="302.0" layoutY="438.0" mnemonicParsing="false" text="Efectivo" />
-      <TreeView layoutX="302.0" layoutY="36.0" prefHeight="316.0" prefWidth="608.9998779296875" />
-      <TextField fx:id="agregar_pelicula" layoutX="302.0" layoutY="371.0" prefWidth="531.000022070315" />
+      <TextField fx:id="agregar_pelicula" layoutX="302.0" layoutY="384.0" prefWidth="531.000022070315" />
       <Button layoutX="18.0" layoutY="485.0" mnemonicParsing="false" onAction="#boton_salir" prefHeight="29.0" prefWidth="126.0" text="Salir del sistema" />
       <ToggleButton layoutX="19.0" layoutY="424.0" mnemonicParsing="false" onAction="#handle_boton_cambios" prefHeight="29.0" prefWidth="126.0" text="Cambios" />
       <ToggleButton layoutX="19.0" layoutY="365.0" mnemonicParsing="false" onAction="#handle_boton_inventario" prefHeight="29.0" prefWidth="126.0" text="Inventario" />
@@ -26,6 +26,9 @@
       <ToggleButton layoutX="19.0" layoutY="249.0" mnemonicParsing="false" onAction="#handle_boton_busqueda" prefHeight="29.0" prefWidth="126.0" text="Busqueda" />
       <ToggleButton layoutX="19.0" layoutY="197.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="126.0" text="Ventas" />
       <ToggleButton layoutX="20.0" layoutY="142.0" mnemonicParsing="false" onAction="#handle_boton_NuevoUsuario" prefHeight="29.0" prefWidth="126.0" text="Nuevo usuario" />
-      <Button layoutX="886.0" layoutY="371.0" mnemonicParsing="false" onAction="#boton_agregar" text="A" />
+      <Button layoutX="886.0" layoutY="383.0" mnemonicParsing="false" onAction="#boton_agregar" text="A" />
+      <TextArea fx:id="ventas" layoutX="288.0" layoutY="27.0" prefHeight="319.0" prefWidth="611.0" />
+      <Label fx:id="total" layoutX="306.0" layoutY="358.0" prefHeight="15.0" prefWidth="44.0" text="Total:" />
+      <Label fx:id="total1" layoutX="348.0" layoutY="358.0" prefHeight="15.0" prefWidth="200.0" text="0.0" />
    </children>
 </Pane>

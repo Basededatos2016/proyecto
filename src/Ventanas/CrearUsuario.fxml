@@ -20,7 +20,7 @@
                   <AnchorPane id="Content" fx:id="InsideCreaUsuario" minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="500.0">
                      <children>
                         <Button fx:id="BotonGuardar" layoutX="148.0" layoutY="350.0" mnemonicParsing="false" onAction="#handle_boton_guardar" text="Guardar" />
-                        <Button fx:id="BotonLimpiar" layoutX="283.0" layoutY="350.0" mnemonicParsing="false" text="Limpiar" />
+                        <Button fx:id="BotonLimpiar" layoutX="283.0" layoutY="350.0" mnemonicParsing="false" onAction="#handle_limpiar" text="Limpiar" />
                         <Label layoutX="92.0" layoutY="131.0" prefHeight="21.0" prefWidth="72.0" text="Nombre:">
                            <font>
                               <Font name="Cambria Math" size="14.0" fx:id="x1" />
@@ -43,6 +43,8 @@
                         <Label layoutX="431.0" layoutY="78.0" text="-" />
                         <TextField fx:id="TelefonoPrimero" layoutX="398.0" layoutY="70.0" prefWidth="30.0" />
                         <Label font="$x1" layoutX="323.0" layoutY="73.0" prefHeight="21.0" prefWidth="76.0" text="Teléfono:" />
+                        <ComboBox fx:id="permisos" layoutX="156.0" layoutY="296.0" prefHeight="25.0" prefWidth="43.0" />
+                        <Label layoutX="89.0" layoutY="301.0" text="Permiso:" />
                      </children>
                   </AnchorPane>
                </content>

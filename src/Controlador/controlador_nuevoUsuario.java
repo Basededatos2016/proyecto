@@ -19,6 +19,8 @@ import java.nio.channels.AcceptPendingException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.function.IntBinaryOperator;
+
 import javafx.scene.control.Label;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TabPane;
@@ -50,6 +52,9 @@ public class controlador_nuevoUsuario implements Initializable  {
     @FXML     private Pane pane;
     @FXML     private ComboBox lista;
     @FXML     private String tipoCedula;
+    @FXML     private int Permiso;
+    @FXML     private ComboBox permisos;
+    @FXML     private String entero;
 
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -58,7 +63,12 @@ public class controlador_nuevoUsuario implements Initializable  {
         this.lista.getItems().clear();
         this.lista.setItems(type_list);
         this.lista.getSelectionModel().selectFirst();
-        //lista.setVisible(true);
+
+        ObservableList<Integer>lista_permisos = FXCollections.observableArrayList(1,2);
+
+        this.permisos.getItems().clear();
+        this.permisos.setItems(lista_permisos);
+        this.permisos.getSelectionModel().selectFirst();
 
 
     }
@@ -74,7 +84,13 @@ public class controlador_nuevoUsuario implements Initializable  {
             Direccion = DireccionUsuario.getText();
             Usuario = loginUsuario.getText();
             Contrasena = contrasenaUsuario.getText();
+            // convirtiendo de string a entero
+            entero = permisos.getSelectionModel().getSelectedItem().toString();
+            Permiso = Integer.parseInt(entero);
 
+
+            /** Insertando en la clase persona **/
+            //debo tambien insertar en la clase vendedor
 
             String query = "INSERT INTO Persona (Cedula, Nombre, Apellido, Telefono, Direccion)" +
                 "VALUES('" + Cedula + "'" + ",'" + Nombre + "'" + ",'" + Apellido + "'" + ",'" +Telefono + "'" +
@@ -82,11 +98,33 @@ public class controlador_nuevoUsuario implements Initializable  {
 
             db.execute_update(query);
 
+            /**Debo Luego insetnar en la clase vendedor**/
+
+
+            String query2 = "INSERT INTO Vendedor (Login, Cedula, Contrasena, Permisos)" +
+                    "VALUES('" + Usuario + "'" + ",'" + Cedula + "'" + ",'" + Contrasena + "'" + ",'" + Permiso+"')" ;
+
+            db.execute_update(query2);
+
 
         }
         catch(Exception e){
             e.printStackTrace();
         }
+
+    }
+
+
+    @FXML protected  void handle_limpiar(ActionEvent event){
+
+       CedulaUsuario.setText(" ");
+       TelefonoPrimero.setText(" ");
+       TelefonoSegundo.setText(" ");
+       NombreUsuario.setText(" ");
+       ApellidoUsuario.setText(" ");
+       DireccionUsuario.setText(" ");
+       loginUsuario.setText(" ");
+       contrasenaUsuario.setText(" ");
 
     }
 

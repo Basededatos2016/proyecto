@@ -1,5 +1,6 @@
 package Controlador;
 
+
 import conexionDB.conexion_db;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +21,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.scene.control.Label;
+import Producto.Producto;
+import javafx.scene.control.TextArea;
+import sun.reflect.generics.tree.Tree;
+
+import javax.management.Query;
 
 
 /**
@@ -31,10 +37,14 @@ public class controlador_ventas implements Initializable  {
      @FXML     private Pane pane;
      @FXML     private Label UsuarioIncorrecto;
      @FXML     private TextField agregar_pelicula;
-
+     @FXML     private conexion_db db = new conexion_db();
+     @FXML     private TextArea ventas;
+     @FXML     private Label total1;
 
 
     public void initialize(URL location, ResourceBundle resources) {
+
+        ventas.setEditable(false);
 
     }
 
@@ -48,9 +58,46 @@ public class controlador_ventas implements Initializable  {
 
     @FXML protected void boton_agregar(ActionEvent event){
 
+        try {
 
+            Producto producto = new Producto();
+            String codigo_peli = agregar_pelicula.getText();
+            int codigo = Integer.parseInt(codigo_peli);
+
+            String query= "SELECT Producto.Nombre ," +  "Producto.Precio " + " FROM Producto " + " WHERE Producto.Id_Producto = " + "'" + codigo + "'";
+            ResultSet rs = db.execute_query(query);
+
+            if(rs.next()) {
+
+                Float precio = rs.getFloat("Precio");
+                String nombre = rs.getString("Nombre");
+                producto.setNombre(nombre);
+                producto.setPrecio(precio);
+
+                // va agregando valores en la lista
+                ventas.appendText(producto.get_Nombre() + "                    " + producto.getPrecio() + "Bs.F" + "\n");
+            }
+
+            //limpio el textfield
+            agregar_pelicula.clear();
+
+            //sumo precio
+
+            String totalAnterior = total1.getText();
+            Float acumulado = Float.parseFloat(totalAnterior);
+            Float total_actual = producto.getPrecio() + acumulado;
+            total1.setText(total_actual.toString());
+
+        }
+                catch(Exception e){
+            e.printStackTrace();
+        }
 
     }
+
+
+
+
 
 
     /** Muestra la ventana para la creacion del usuario **/

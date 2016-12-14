@@ -33,7 +33,7 @@ public class conexion_db
         FileInputStream __in = null;
         try
         {
-            __in = new FileInputStream("/home/juancho/IdeaProjects/proyectoSulpick/src/conexionDB/db_config.properties");
+            __in = new FileInputStream("/home/sulpickb/IdeaProjects/ProyectoNew/src/conexionDB/db_config.properties");
             System.out.println("properties readed");
         }
         catch (FileNotFoundException e)

@@ -82,6 +82,7 @@ public class main_controller_java implements Initializable {
             while (rs.next()) {
                 //System.out.println("PRUEBA");
 
+
                 String name = rs.getString("Login");
                 String pass = rs.getString("Contrasena");
                 permiso = rs.getInt("Permisos");
