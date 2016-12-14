@@ -24,8 +24,15 @@ public class controlador_reporte implements Initializable
 
     public void initialize(URL location, ResourceBundle resources) {
 
+
     }
 
+
+    @FXML protected void handle_boton_agregar(ActionEvent event){
+
+
+
+    }
 
     @FXML protected void handle_boton_busqueda(ActionEvent event){
         try {

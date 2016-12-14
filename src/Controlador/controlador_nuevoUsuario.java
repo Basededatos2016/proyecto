@@ -58,6 +58,8 @@ public class controlador_nuevoUsuario implements Initializable  {
         this.lista.getItems().clear();
         this.lista.setItems(type_list);
         this.lista.getSelectionModel().selectFirst();
+        //lista.setVisible(true);
+
 
     }
 

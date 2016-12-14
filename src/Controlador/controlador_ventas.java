@@ -30,14 +30,28 @@ public class controlador_ventas implements Initializable  {
 
      @FXML     private Pane pane;
      @FXML     private Label UsuarioIncorrecto;
+     @FXML     private TextField agregar_pelicula;
 
 
 
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+
+    @ FXML protected void boton_facturar(ActionEvent event){
+
 
 
     }
+
+
+    @FXML protected void boton_agregar(ActionEvent event){
+
+
+
+    }
+
 
     /** Muestra la ventana para la creacion del usuario **/
 
