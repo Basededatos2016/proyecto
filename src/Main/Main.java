@@ -18,8 +18,8 @@ public class Main extends Application {
     {
 
         Parent root = FXMLLoader.load(getClass().getResource("../Ventanas/iniciodesesion.fxml"));
-        primaryStage.setTitle("Claqueta tu tienda de cine");
-        primaryStage.setScene(new Scene(root, 1000 ,700));
+        primaryStage.setTitle("Inicio de sesion | Claqueta tu tienda de cine");
+        primaryStage.setScene(new Scene(root, 928 ,615));
         primaryStage.show();
         primary_stage = primaryStage;
 

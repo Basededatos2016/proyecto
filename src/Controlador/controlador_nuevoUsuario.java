@@ -51,7 +51,6 @@ public class controlador_nuevoUsuario implements Initializable  {
     @FXML     private ComboBox lista;
     @FXML     private String tipoCedula;
 
-
     public void initialize(URL location, ResourceBundle resources) {
 
         ObservableList<String> type_list = FXCollections.observableArrayList("V","E");
@@ -60,14 +59,7 @@ public class controlador_nuevoUsuario implements Initializable  {
         this.lista.setItems(type_list);
         this.lista.getSelectionModel().selectFirst();
 
-
     }
-
-
-    @FXML protected void combo_cedula(ActionEvent event){
-
-          }
-
 
     @FXML protected void handle_boton_guardar(ActionEvent event){
         try {
@@ -96,7 +88,6 @@ public class controlador_nuevoUsuario implements Initializable  {
 
     }
 
-
     @FXML protected void handle_boton_nuevoUsuario(ActionEvent event){
         try {
 
@@ -114,7 +105,6 @@ public class controlador_nuevoUsuario implements Initializable  {
         }
 
     }
-
 
     @FXML protected void handle_boton_busqueda(ActionEvent event){
         try {
@@ -162,7 +152,6 @@ public class controlador_nuevoUsuario implements Initializable  {
 
     }
 
-
     @FXML protected void handle_boton_cambios(ActionEvent event){
         try {
 
@@ -177,7 +166,6 @@ public class controlador_nuevoUsuario implements Initializable  {
         }
 
     }
-
 
     @FXML protected void handle_boton_ventas(ActionEvent event){
         try {
