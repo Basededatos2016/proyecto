@@ -104,7 +104,7 @@ public class main_controller_java implements Initializable {
                           controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
                           controller.initialize(null, null);
 
-                          Main.primary_stage.setTitle("Recepcion | Gimnasio Impacto (C) 2016");
+                          Main.primary_stage.setTitle("Ventas Administrador| Claqueta tu tienda de cine");
 
                           pane.getChildren().setAll(root);
 
@@ -123,7 +123,7 @@ public class main_controller_java implements Initializable {
                           controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
                           controller.initialize(null, null);
 
-                          Main.primary_stage.setTitle("Recepcion | Gimnasio Impacto (C) 2016");
+                          Main.primary_stage.setTitle("Ventas de Empleado| Claqueta tu tienda de cine");
 
                           pane.getChildren().setAll(root);
 

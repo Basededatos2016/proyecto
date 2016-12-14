@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.controlador_areaCliente">
+   <children>
+      <Button layoutX="35.0" layoutY="259.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Omitir" />
+      <Button layoutX="35.0" layoutY="196.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Seleccionar" />
+      <Button layoutX="35.0" layoutY="136.0" mnemonicParsing="false" prefHeight="23.94140625" text="Nuevo cliente" />
+      <Label layoutX="365.0" layoutY="45.0" text="Area de clientes">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="pane" layoutX="244.0" layoutY="92.0" prefHeight="384.0" prefWidth="328.0" />
+   </children>
+</Pane>

@@ -51,56 +51,51 @@ public class controlador_nuevoUsuario implements Initializable  {
     @FXML     private ComboBox lista;
     @FXML     private String tipoCedula;
 
-    /**
-    ObservableList<String> items = FXCollections.observableArrayList();
-    items.addAll("item-1", "item-2", "item-3", "item-4", "item-5");
-
-    ComboBox<String> cbx = new ComboBox<>(items);
-    StackPane pane = new StackPane(cbx);
-
-    Scene scene = new Scene(pane, 250, 150);
-    stage.setTitle("ComboBox JavaFX");
-    stage.setScene(scene);
-    stage.show();
-**/
-
 
     public void initialize(URL location, ResourceBundle resources) {
 
+        ObservableList<String> type_list = FXCollections.observableArrayList("V","E");
+
+        this.lista.getItems().clear();
+        this.lista.setItems(type_list);
+        this.lista.getSelectionModel().selectFirst();
 
 
     }
 
 
+    @FXML protected void combo_cedula(ActionEvent event){
 
-        @FXML    protected void handle_boton_guardar(ActionEvent event) {
+          }
+
+
+    @FXML protected void handle_boton_guardar(ActionEvent event){
         try {
 
-
-          //  tipoCedula = lista.toString();
-            Cedula = CedulaUsuario.getText();
+            tipoCedula = lista.getSelectionModel().getSelectedItem().toString();
+            Cedula = tipoCedula + "-"+ CedulaUsuario.getText();
             Nombre = NombreUsuario.getText();
             Apellido = ApellidoUsuario.getText();
-            Telefono = TelefonoPrimero.getText() + "-" + TelefonoSegundo.getText();
+            Telefono = TelefonoPrimero.getText() + TelefonoSegundo.getText();
             Direccion = DireccionUsuario.getText();
             Usuario = loginUsuario.getText();
             Contrasena = contrasenaUsuario.getText();
 
 
-            String query = "INSERT INTO Persona (Cedula, Nombre, Apellido, Telefono, Direccion) " +
-                    "VALUES ( '" + Cedula + "'"+ "'" + Nombre + "'" + Apellido + "'" + "'" +Telefono + "'" +
-                    "'" + Direccion  +"'" + "'" + Usuario + "'" + "'" + Contrasena + "')" ;
-            db.execute_query(query);
+            String query = "INSERT INTO Persona (Cedula, Nombre, Apellido, Telefono, Direccion)" +
+                "VALUES('" + Cedula + "'" + ",'" + Nombre + "'" + ",'" + Apellido + "'" + ",'" +Telefono + "'" +
+                ",'" + Direccion  +"')" ;
 
-        } catch (Exception e){  /** Excepcion general **/
+            db.execute_update(query);
 
+
+        }
+        catch(Exception e){
             e.printStackTrace();
         }
 
-
-
-
     }
+
 
     @FXML protected void handle_boton_nuevoUsuario(ActionEvent event){
         try {

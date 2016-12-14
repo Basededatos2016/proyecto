@@ -52,7 +52,7 @@ public class controlador_ventas implements Initializable  {
             Parent root = (Parent)fxmlLoader.load();
             controlador_nuevoUsuario controller = fxmlLoader.<controlador_nuevoUsuario>getController();
             controller.initialize(null, null);
-            Main.primary_stage.setTitle("Recepcion | Gimnasio Impacto (C) 2016");
+            Main.primary_stage.setTitle("Area de Usuarios | Claqueta tu tienda de cine");
             pane.getChildren().setAll(root);
 
 
@@ -77,7 +77,7 @@ public class controlador_ventas implements Initializable  {
             controlador_buscar controller = fxmlLoader.<controlador_buscar>getController();
             controller.initialize(null, null);
 
-            Main.primary_stage.setTitle("Recepcion | Gimnasio Impacto (C) 2016");
+            Main.primary_stage.setTitle("Busqueda de productos | Claqueta tu tienda de cine");
             pane.getChildren().setAll(root);
 
 
@@ -94,7 +94,7 @@ public class controlador_ventas implements Initializable  {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Reportes.fxml"));
             Parent root = fxmlLoader.load();
             controlador_reporte controller = fxmlLoader.<controlador_reporte>getController();
-            Main.primary_stage.setTitle("Reportes de Productos");
+            Main.primary_stage.setTitle("Reporte de ventas | Claqueta tu tienda de cine");
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -109,7 +109,7 @@ public class controlador_ventas implements Initializable  {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/inventario.fxml"));
             Parent root = fxmlLoader.load();
             controlador_inventario controller = fxmlLoader.<controlador_inventario>getController();
-            Main.primary_stage.setTitle("Inventario de Productos");
+            Main.primary_stage.setTitle("Inventario de productos | Claqueta tu tienda de cine");
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -125,7 +125,7 @@ public class controlador_ventas implements Initializable  {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Cambios.fxml"));
             Parent root = fxmlLoader.load();
             controlador_cambios controller = fxmlLoader.<controlador_cambios>getController();
-            Main.primary_stage.setTitle("Cambio de Productos");
+            Main.primary_stage.setTitle("Cambio de productos | Claqueta tu tienda de cine");
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
@@ -141,7 +141,7 @@ public class controlador_ventas implements Initializable  {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Ventanas/Ventas.fxml"));
             Parent root = fxmlLoader.load();
             controlador_ventas controller = fxmlLoader.<controlador_ventas>getController();
-            Main.primary_stage.setTitle("Cambio de Productos");
+            Main.primary_stage.setTitle("Ventas | Claqueta tu tienda de cine");
             pane.getChildren().setAll(root);
         }
         catch(Exception e){
