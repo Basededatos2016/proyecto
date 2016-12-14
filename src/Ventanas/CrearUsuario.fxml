@@ -20,7 +20,7 @@
                   <AnchorPane id="Content" fx:id="InsideCreaUsuario" minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="500.0">
                      <children>
                         <Button fx:id="BotonGuardar" layoutX="148.0" layoutY="350.0" mnemonicParsing="false" onAction="#handle_boton_guardar" text="Guardar" />
-                        <Button fx:id="BotonLimpiar" layoutX="283.0" layoutY="350.0" mnemonicParsing="false" onAction="#handle_limpiar" text="Limpiar" />
+                        <Button fx:id="BotonLimpiar" layoutX="283.0" layoutY="351.0" mnemonicParsing="false" onAction="#handle_limpiar" text="Limpiar" />
                         <Label layoutX="92.0" layoutY="131.0" prefHeight="21.0" prefWidth="72.0" text="Nombre:">
                            <font>
                               <Font name="Cambria Math" size="14.0" fx:id="x1" />
@@ -34,17 +34,17 @@
                         <Label font="$x1" layoutX="90.0" layoutY="240.0" prefHeight="21.0" prefWidth="57.000099999997474" text="Usuario:" />
                         <TextField fx:id="loginUsuario" layoutX="158.0" layoutY="239.0" prefWidth="125.0" />
                         <Label font="$x1" layoutX="303.0" layoutY="240.0" prefHeight="22.0" prefWidth="101.0" text="Constraseña:" />
-                        <TextField fx:id="contrasenaUsuario" layoutX="412.0" layoutY="239.0" prefWidth="157.0" />
                         <TextField fx:id="CedulaUsuario" layoutX="213.0" layoutY="72.0" prefWidth="89.0" />
                         <Label layoutX="112.0" layoutY="76.0" text="-" />
                         <ComboBox fx:id="lista" layoutX="151.0" layoutY="73.0" minWidth="28.0" prefHeight="21.0" prefWidth="42.0" />
-                        <Label font="$x1" layoutX="95.0" layoutY="74.0" prefHeight="22.0" prefWidth="64.0" text="Cédula:" />
-                        <TextField fx:id="TelefonoSegundo" layoutX="445.0" layoutY="72.0" prefWidth="118.0" />
-                        <Label layoutX="431.0" layoutY="78.0" text="-" />
-                        <TextField fx:id="TelefonoPrimero" layoutX="398.0" layoutY="70.0" prefWidth="30.0" />
+                        <Label font="$x1" layoutX="93.0" layoutY="74.0" prefHeight="22.0" prefWidth="64.0" text="Cédula:" />
+                        <TextField fx:id="TelefonoSegundo" layoutX="467.0" layoutY="73.0" prefWidth="118.0" />
+                        <Label layoutX="457.0" layoutY="78.0" text="-" />
+                        <TextField fx:id="TelefonoPrimero" layoutX="398.0" layoutY="72.0" prefHeight="25.0" prefWidth="54.0" />
                         <Label font="$x1" layoutX="323.0" layoutY="73.0" prefHeight="21.0" prefWidth="76.0" text="Teléfono:" />
                         <ComboBox fx:id="permisos" layoutX="156.0" layoutY="296.0" prefHeight="25.0" prefWidth="43.0" />
                         <Label layoutX="89.0" layoutY="301.0" text="Permiso:" />
+                        <PasswordField fx:id="contrasenaUsuario" layoutX="405.0" layoutY="242.0" />
                      </children>
                   </AnchorPane>
                </content>

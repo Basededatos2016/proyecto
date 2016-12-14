@@ -110,8 +110,7 @@ public class controlador_buscar implements  Initializable {
 
     }
 
-    @FXML
-    void Buscar() {
+    @FXML    void Buscar() {
 
         //populate doctors combo box from DB
 
@@ -127,12 +126,11 @@ public class controlador_buscar implements  Initializable {
         String Temp = temp.getText();
         String Annio = anio.getText();
 
-
         if (TipoProducto.getValue() == TipoProducto.getItems().get(0)) {
 
-            String q = "SELECT p.Nombre, p.Anio, p.Precio, p.Existencia, p.Genero, ip.Idioma, peli.Duracion, peli.Director FROM producto p JOIN pelicula peli ON p.Id_Producto = peli.Id_pelicula " +
-                    " JOIN idioma_producto idp ON idp.Id_Producto = p.Id_Producto " +
-                    " JOIN iproducto ip ON ip.Id_idioma = idp.Id_idioma " +
+            String q = "SELECT p.Nombre, p.Anio, p.Precio, p.Existencia, p.Genero, ip.Idioma, peli.Duracion, peli.Director FROM Producto p JOIN Pelicula peli ON p.Id_Producto = peli.Id_pelicula " +
+                    " JOIN Idioma_Producto idp ON idp.Id_Producto = p.Id_Producto " +
+                    " JOIN iProducto ip ON ip.Id_idioma = idp.Id_idioma " +
                     " WHERE p.Nombre = '" + nomb + "' AND " +
                     "p.Anio = '" + Annio + "'";
             ResultSet rs = db.execute_query(q);
@@ -142,14 +140,15 @@ public class controlador_buscar implements  Initializable {
                 while (rs.next()) {
 
                     idioma.setText(rs.getString("Idioma"));
+                    System.out.println(idioma.getText());
+
+
                     precio.setText(rs.getString("Precio"));
                     director.setText(rs.getString("Director"));
                     duracion.setText(rs.getString("Duracion"));
                     nexistencias.setText(rs.getString("Existencia"));
                     genero.setText(rs.getString("Genero"));
                     anio.setText(rs.getString("Anio"));
-
-
                 }
 
             } catch (SQLException e) {
@@ -158,7 +157,7 @@ public class controlador_buscar implements  Initializable {
 
         } else {
             if (TipoProducto.getValue() == TipoProducto.getItems().get(1)) {
-                String q = "SELECT p.Nombre, p.Anio, p.Precio, p.Existencia, p.Genero, ip.Idioma, s.N_cap, s.N_temporadas FROM producto p JOIN serie s ON p.Id_Producto = s.Id_serie " +
+                String q = "SELECT p.Nombre, p.Anio, p.Precio, p.Existencia, p.Genero, ip.Idioma, s.N_cap, s.N_temporadas FROM Producto p JOIN Serie s ON p.Id_Producto = s.Id_serie " +
                         " JOIN idioma_producto idp ON idp.Id_Producto = p.Id_Producto " +
                         " JOIN iproducto ip ON ip.Id_idioma = idp.Id_idioma " +
                         " WHERE p.Nombre = '" + nomb + "' AND " +
@@ -201,10 +200,6 @@ public class controlador_buscar implements  Initializable {
         genero.clear();
 
     }
-
-
-
-
 
 
     @FXML protected void handle_boton_nuevoUsuario(ActionEvent event){
