@@ -15,20 +15,196 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.scene.control.TextArea;
+import conexionDB.conexion_db;
+
+import javax.swing.*;
+
+
 
 /**
  * Created by Evely on 21/11/2016.
  */
-public class controlador_buscar implements  Initializable{
+public class controlador_buscar implements  Initializable {
 
     //@FXML private Button ventas;
-   // @FXML     private conexion_db db = new conexion_db();
-    @FXML     private Pane pane;
+    @FXML
+    private conexion_db db = new conexion_db();
+    @FXML
+    private Pane pane;
+    @FXML
+    private Button ventas;
+    @FXML
+    private Button limpiar;
+    @FXML
+    private ComboBox TipoProducto;
+    @FXML
+    private TextField nombre;
+    @FXML
+    private TextField anio;
+    @FXML
+    private TextField temp;
+    @FXML
+    private TextField precio;
+    @FXML
+    private TextField idioma;
+    @FXML
+    private TextField duracion;
+    @FXML
+    private TextField director;
+    @FXML
+    private TextField nexistencias;
+    @FXML
+    private TextField genero;
+    @FXML
+    private TextField ncap;
 
 
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
+    @FXML
+    public void Seleccionar_Producto() throws Exception {
+
+        if (TipoProducto.getValue() == TipoProducto.getItems().get(0)) {
+            temp.setEditable(false);
+            precio.setEditable(false);
+            idioma.setEditable(false);
+            duracion.setEditable(false);
+            director.setEditable(false);
+            nexistencias.setEditable(false);
+            genero.setEditable(false);
+            ncap.setEditable(false);
+            anio.setEditable(true);
+
+        } else {
+            if (TipoProducto.getValue() == TipoProducto.getItems().get(1)) {
+                anio.setEditable(false);
+                precio.setEditable(false);
+                idioma.setEditable(false);
+                duracion.setEditable(false);
+                director.setEditable(false);
+                nexistencias.setEditable(false);
+                genero.setEditable(false);
+                ncap.setEditable(false);
+                temp.setEditable(true);
+            }
+        }
+
+
+    }
+
+    @FXML
+    void Buscar() {
+
+        //populate doctors combo box from DB
+
+        precio.setEditable(false);
+        idioma.setEditable(false);
+        duracion.setEditable(false);
+        director.setEditable(false);
+        nexistencias.setEditable(false);
+        genero.setEditable(false);
+        ncap.setEditable(false);
+
+        String nomb = nombre.getText();
+        String Temp = temp.getText();
+        String Annio = anio.getText();
+
+
+        if (TipoProducto.getValue() == TipoProducto.getItems().get(0)) {
+
+            String q = "SELECT p.Nombre, p.Anio, p.Precio, p.Existencia, p.Genero, ip.Idioma, peli.Duracion, peli.Director FROM producto p JOIN pelicula peli ON p.Id_Producto = peli.Id_pelicula " +
+                    " JOIN idioma_producto idp ON idp.Id_Producto = p.Id_Producto " +
+                    " JOIN iproducto ip ON ip.Id_idioma = idp.Id_idioma " +
+                    " WHERE p.Nombre = '" + nomb + "' AND " +
+                    "p.Anio = '" + Annio + "'";
+            ResultSet rs = db.execute_query(q);
+
+
+            try {
+                while (rs.next()) {
+
+                    idioma.setText(rs.getString("Idioma"));
+                    precio.setText(rs.getString("Precio"));
+                    director.setText(rs.getString("Director"));
+                    duracion.setText(rs.getString("Duracion"));
+                    nexistencias.setText(rs.getString("Existencia"));
+                    genero.setText(rs.getString("Genero"));
+                    anio.setText(rs.getString("Anio"));
+
+
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        } else {
+            if (TipoProducto.getValue() == TipoProducto.getItems().get(1)) {
+                String q = "SELECT p.Nombre, p.Anio, p.Precio, p.Existencia, p.Genero, ip.Idioma, s.N_cap, s.N_temporadas FROM producto p JOIN serie s ON p.Id_Producto = s.Id_serie " +
+                        " JOIN idioma_producto idp ON idp.Id_Producto = p.Id_Producto " +
+                        " JOIN iproducto ip ON ip.Id_idioma = idp.Id_idioma " +
+                        " WHERE p.Nombre = '" + nomb + "' AND " +
+                        "s.N_temporadas = '" + Temp + "'";
+
+                ResultSet rs = db.execute_query(q);
+
+                try {
+                    while (rs.next()) {
+
+                        idioma.setText(rs.getString("Idioma"));
+                        precio.setText(rs.getString("Precio"));
+                        //director.setText(rs.getString("Director"));
+                        //duracion.setText(rs.getString("Duracion"));
+                        nexistencias.setText(rs.getString("Existencia"));
+                        genero.setText(rs.getString("Genero"));
+                        anio.setText(rs.getString("Anio"));
+                        ncap.setText(rs.getString("N_cap"));
+
+                    }
+
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
+    @FXML  void Limpiar() throws Exception {
+        ncap.clear();
+        nombre.clear();
+        temp.clear();
+        anio.clear();
+        precio.clear();
+        idioma.clear();
+        duracion.clear();
+        director.clear();
+        nexistencias.clear();
+        genero.clear();
+
+    }
+
+
+
+
 
 
     @FXML protected void handle_boton_nuevoUsuario(ActionEvent event){
@@ -126,49 +302,4 @@ public class controlador_buscar implements  Initializable{
 
     }
 
-
-
-    /**
-    @FXML
-    void Mostrar_Inventario() throws Exception {
-
-        Stage primary_stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("../Ventanas/inventario.fxml"));
-        primary_stage.setTitle("Inventario");
-        primary_stage.setScene(new Scene(root, 630 , 640));
-        primary_stage.show();
-
-    }
-
-    @FXML
-    void Mostrar_CrearUsuario() throws Exception {
-
-        Stage primary_stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("../Ventanas/CrearUsuario.fxml"));
-        primary_stage.setTitle("Crear usuario");
-        primary_stage.setScene(new Scene(root, 630 , 640));
-        primary_stage.show();
-
-    }
-
-
-    @FXML
-    void Mostrar_Cambios() throws Exception {
-
-        Stage primary_stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("../Ventanas/Cambios.fxml"));
-        primary_stage.setTitle("Cambios");
-        primary_stage.setScene(new Scene(root, 630 , 640));
-        primary_stage.show();
-
-    }
-
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
-
-    **/
 }
